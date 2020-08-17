@@ -1,0 +1,21 @@
+body {
+margin: 5vw 30vw 0vw 30vw;
+background-color:rgb(235,230,255 );
+}
+h1 {
+  text-align: center;
+}
+button {
+  margin: 5px;
+}
+
+
+#DoctorWho {
+  
+}
+.noshow {
+  display: none;
+}
+.show {
+  display: block;
+}
