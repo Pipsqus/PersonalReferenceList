@@ -11,11 +11,18 @@ button {
 
 
 #DoctorWho {
-  
+
 }
 .noshow {
   display: none;
 }
 .show {
   display: block;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    margin: 5vw 2vw 2vw 2vw;
+    background-color:rgb(235,230,255 );
+  }
 }
