@@ -4,22 +4,54 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pipsqus References</title>
-    <style>
-      a:visited, a:hover {
-        color: blue;
-      }
-    </style>
+    <title> Pipsqus References </title>
   </head>
   <body>
     <h1> Reference List </h1>
 
 
-    <ul>
-      <li><a href="https://en.wikipedia.org/wiki/Irving_Finkel"> Irving Finkel </a></li>
-      <li><a href="https://etc.usf.edu/lit2go/"> Lit2Go </a></li>
-      <li> Richard Harris:<a href="https://richardjharris.github.io/unicode-in-five-minutes.html">  Unicode in 5 Minutes</a></li>
-    </ul> <br>
+
+    <button type="button" onclick="ShowBlogs()"> Blogs </button>
+      <ul class="noshow" id="Blogs">
+          <li> Lesswrong, <a href="https://www.lesswrong.com/"> Eliezer Yudkowsky </a> </li>
+          <li> <a href="https://quirksmode.org/"> Peter-Paul Koch </a> </li>
+          <li> <a href="https://lobste.rs/"> Lobste.rs </a> </li>
+          <li> Alternate-history fiction <a href="http://uchronia.com/"> website </a> </li>
+          <li> <a href="https://meiert.com/en/"> Meiert </a> </li>
+          <li> <a href="https://www.indiehackers.com/"> Indiehackers </a> </li>
+        </ul> <br>
+
+        <button type="button" onclick="ShowMathematics()"> Mathematics </button>
+          <ul class="noshow" id="Mathematics">
+          <li> Books for <a href="https://www.ocf.berkeley.edu/~abhishek/chicmath.htm"> undergraduate mathematics </a> </li>
+          <li> Forde's list of books for <a href="https://marktomforde.com/academic/mathmajors/textbook-suggestions.html"> Self Study</a> </li>
+        </ul> <br>
+
+
+<h2> Archive </h2>
+
+    <button type="button" onclick="ShowFiction()"> Fiction </button>
+      <ul class="noshow" id="Fiction">
+          <li> Asimov, <a href="https://templatetraining.princeton.edu/sites/training/files/the_last_question_-_issac_asimov.pdf"> The last question </a> </li>
+          <li> Ted Chiang, <a href="http://www.concatenation.org/futures/whatsexpected.pdf"> What's expected of us</a> </li>
+        </ul> <br>
+
+    <button type="button" onclick="ShowComputerScience()"> Computer Science </button>
+      <ul class="noshow" id="ComputerScience">
+        <li><a href="https://github.com/mikecao/umami">umami</a>: a web analytics tool</li>
+        <li> <a href="https://labuladong.gitbook.io/algo-en/">fucking-algorithm</a>: Leetcode explained </li>
+        <li> <a href="https://github.com/kahun/awesome-sysadmin">awesome-sysadmin</a>: resources about system administration </li>
+        <li> Free fonts <a href="https://fontlibrary.org/"> library </a> </li>
+        <li> Some snippets of  <a href="reusable-code.html"> useful code </a> </li>
+        <li> <a href="https://www.flaticon.com/"> Free vector images</a> </li>
+        <li> Javascript <a href="https://github.com/trekhleb/javascript-algorithms"> algorithms </a> </li>
+        <li> <a href="https://www.freecodecamp.org/"> freecodecamp </a> </li>
+        <li> <a href="https://pantel.is/projects/css3d/"> 3D-CSS game </a> </li>
+        <li> Essential <a href="http://cslibrary.stanford.edu/101/">C</a> </li>
+        <li> Free video <a href="https://talk.vasanthv.com/s3i2py">talks</a> </li>
+        <li> Color palette <a href="http://paletton.com"> helper </a> </li>
+        <li> Richard Harris: <a href="https://richardjharris.github.io/unicode-in-five-minutes.html">Unicode in 5 Minutes</a></li>
+      </ul> <br>
 
     <button type="button" onclick="ShowDoctorWho()"> Doctor Who </button>
         <ul class="noshow" id="DoctorWho">
@@ -34,43 +66,6 @@
           <li><a href="https://www.youtube.com/watch?v=b7TpRgUCzlE">You hag! You perfidious hag! You Virago!</a></li>
         </ul> <br>
 
-      <button type="button" onclick="ShowComputerScience()"> Computer Science </button>
-        <ul class="noshow" id="ComputerScience">
-          <li><a href="https://github.com/mikecao/umami">umami</a>: a web analytics tool</li>
-          <li> <a href="https://labuladong.gitbook.io/algo-en/">fucking-algorithm</a>: Leetcode explained </li>
-          <li> <a href="https://github.com/kahun/awesome-sysadmin">awesome-sysadmin</a>: resources about system administration </li>
-          <li> Free fonts <a href="https://fontlibrary.org/"> library </a> </li>
-          <li> Some snippets of  <a href="reusable-code.html"> useful code </a> </li>
-          <li> <a href="https://www.flaticon.com/"> Free vector images</a> </li>
-          <li> Javascript <a href="https://github.com/trekhleb/javascript-algorithms"> algorithms </a> </li>
-          <li> <a href="https://www.freecodecamp.org/"> freecodecamp </a> </li>
-          <li> <a href="https://pantel.is/projects/css3d/"> 3D-CSS game </a> </li>
-          <li> Essential <a href="http://cslibrary.stanford.edu/101/">C</a> </li>
-          <li> Free video <a href="https://talk.vasanthv.com/s3i2py">talks</a> </li>
-          <li> Color palette <a href="http://paletton.com"> helper </a> </li>
-        </ul> <br>
-
-    <button type="button" onclick="ShowBlogs()"> Blogs </button>
-      <ul class="noshow" id="Blogs">
-          <li> <a href="https://www.lesswrong.com/"> Eliezer Yudkowsky </a> </li>
-          <li> <a href="https://quirksmode.org/"> Peter-Paul Koch </a> </li>
-          <li> <a href="https://lobste.rs/"> Lobste.rs </a> </li>
-          <li> Alternate-history fiction <a href="http://uchronia.com/"> website </a> </li>
-          <li> <a href="https://meiert.com/en/"> Meiert </a> </li>
-          <li> <a href="https://www.indiehackers.com/"> Indiehackers </a> </li>
-        </ul> <br>
-
-        <button type="button" onclick="ShowMathematics()"> Mathematics </button>
-          <ul class="noshow" id="Mathematics">
-          <li> Books for <a href="https://www.ocf.berkeley.edu/~abhishek/chicmath.htm"> undergraduate mathematics </a> </li>
-          <li> Forde's list of books for <a href="https://marktomforde.com/academic/mathmajors/textbook-suggestions.html"> Self Study</a> </li>
-        </ul> <br>
-
-    <button type="button" onclick="ShowFiction()"> Fiction </button>
-      <ul class="noshow" id="Fiction">
-          <li> Asimov, <a href="https://templatetraining.princeton.edu/sites/training/files/the_last_question_-_issac_asimov.pdf"> The last question </a> </li>
-          <li> Ted Chiang, <a href="http://www.concatenation.org/futures/whatsexpected.pdf"> What's expected of us</a> </li>
-        </ul> <br>
 
     <button type="button" onclick="ShowMedicine()"> Medicine </button>
       <ul class="noshow" id="Medicine">
@@ -79,24 +74,58 @@
         <li><a href="RefDocuments/BRAYGlucose.html"> Bray, A Gut Instinct for Glucose </a></li>
       </ul> <br>
 
+
+    <button type="button" onclick="ShowSonstige()"> Sonstige </button>
+      <ul class="noshow" id="Sonstige">
+        <li><a href="https://en.wikipedia.org/wiki/Irving_Finkel"> Irving Finkel </a></li>
+        <li><a href="https://etc.usf.edu/lit2go/"> Lit2Go </a></li>
+
+      </ul> <br>
+
+
 <script type="text/javascript">
-    function ShowDoctorWho() {
-      document.getElementById("DoctorWho").classList.toggle("show");
-    }
-    function ShowComputerScience() {
-      document.getElementById("ComputerScience").classList.toggle("show");
-    }
     function ShowBlogs() {
-      document.getElementById("Blogs").classList.toggle("show");
+      var Blogs =  document.getElementById("Blogs") ;
+      Blogs.classList.toggle("show");
+      Blogs.scrollIntoView();
+      window.scrollBy(0,-50)
     }
     function ShowMathematics() {
-      document.getElementById("Mathematics").classList.toggle("show");
+      var Mathematics = document.getElementById("Mathematics")
+      Mathematics.classList.toggle("show");
+      Mathematics.scrollIntoView();
+      window.scrollBy(0,-50);
     }
+
     function ShowFiction() {
-      document.getElementById("Fiction").classList.toggle("show");
+      var Fiction = document.getElementById("Fiction")
+      Fiction.classList.toggle("show");
+      Fiction.scrollIntoView();
+      window.scrollBy(0,-50);
+    }
+    function ShowComputerScience() {
+      var ComputerScience = document.getElementById("ComputerScience")
+      ComputerScience.classList.toggle("show");
+      ComputerScience.scrollIntoView();
+      window.scrollBy(0,-50);
+    }
+    function ShowDoctorWho() {
+      var DoctorWho = document.getElementById("DoctorWho")
+      DoctorWho.classList.toggle("show");
+      DoctorWho.scrollIntoView();
+      window.scrollBy(0,-50);
     }
     function ShowMedicine() {
-      document.getElementById("Medicine").classList.toggle("show");
+      var Medicine = document.getElementById("Medicine")
+      Medicine.classList.toggle("show");
+      Medicine.scrollIntoView();
+      window.scrollBy(0,-50);
+    }
+    function ShowSonstige() {
+      var Sonstige = document.getElementById("Sonstige")
+      Sonstige.classList.toggle("show");
+      Sonstige.scrollIntoView();
+      window.scrollBy(0,-50);
     }
 </script>
   </body>
