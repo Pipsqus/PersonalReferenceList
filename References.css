@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+  font-size: 2rem;
+  margin: 5vw 15vw 0vw 15vw;
+  background-color:rgb(235,230,255);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.portals {
+  flex: 1;
+  width: 40vw;
+  margin: 1rem;
+
+  padding: 3rem;
+  background: linear-gradient(90deg, rgba(50, 150, 200, 0.7), rgba(50, 200, 0, 0.7));
+  border-radius: 30px;
+
+  font-size: 2rem;
+}
+.portals:hover {
+  opacity: 0.8;
+}
+.portals:active {
+  box-shadow: 0.1rem -0.1rem 0.1rem 1px black;
+}
