@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 5vw 15vw 0vw 15vw;
   background-color:rgb(235,230,255);
 }
@@ -15,18 +15,39 @@ a {
 }
 .portals {
   flex: 1;
-  width: 40vw;
-  margin: 1rem;
+  width: 35vw; min-width: 8rem;
+  position: relative;
+  margin: 0.6rem;
 
   padding: 3rem;
   background: linear-gradient(90deg, rgba(50, 150, 200, 0.7), rgba(50, 200, 0, 0.7));
-  border-radius: 30px;
+  border-radius: 20px;
 
   font-size: 2rem;
 }
 .portals:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .portals:active {
-  box-shadow: 0.1rem -0.1rem 0.1rem 1px black;
+  box-shadow: 0.1rem -0.1rem 0.1rem 1px rgba(0, 0, 0, 0.15);
+}
+
+.portals:first-child::after {
+  content: "";
+  position: absolute;
+  margin-left: 1rem; margin-top: -0.5rem;
+  width: 60px; height: 60px;
+
+  background: no-repeat url("Pipsqus/favicon.png");
+  background-size: contain;
+}
+.portals:last-child::after {
+  content: "";
+  position: absolute;
+  margin-left: 1rem; margin-top: -0.5rem;
+  width: 60px; height: 60px;
+  border-radius: 30px;
+
+  background: no-repeat url("Beardger/favicon.png");
+  background-size: contain;
 }
