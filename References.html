@@ -2,34 +2,49 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="References.css">
     <style media="screen">
       body {
         text-align: center;
+        font-size: 2rem;
+        margin: 5vw 15vw 0vw 15vw;
+        background-color:rgb(235,230,255);
+      }
+      a {
+        text-decoration: none;
+        color: black;
       }
       .flex{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
       }
-      .Pipsqus {
-        width: 45vw; height: 45vh;
+      .portals {
         flex: 1;
+        width: 40vw;
+        margin: 1rem;
+
+        padding: 3rem;
+        background: linear-gradient(90deg, rgba(50, 150, 200, 0.7), rgba(50, 200, 0, 0.7));
+        border-radius: 30px;
+
+        font-size: 2rem;
       }
-      .Beardger {
-        width: 45vw; height: 45vh;
-        flex: 1;
+      .portals:hover {
+        opacity: 0.8;
       }
-      a { text-decoration: none; color: none }
+      .portals:active {
+        box-shadow: 0.1rem -0.1rem 0.1rem 1px black;
+      }
     </style>
     <title> References </title>
   </head>
   <body>
+    <h1>Choose <br> your library</h1>
     <div class="flex">
-      <section class="Pipsqus">
-        <a href="Pipsqus/PipsqusRef.html"> Pipsqus References </a>
-      </section>
-      <section class="Beardger">
-        <a href="Beardger/BeardgerRef.html"> Beardger References </a>
-      </section>
+        <a href="Pipsqus/PipsqusRef.html" class="portals">Pipsqus</a>
+
+        <a href="" class="portals">Beardger</a>
     </div>
 
   </body>
