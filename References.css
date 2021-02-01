@@ -1,8 +1,9 @@
 body {
   text-align: center;
   font-size: 1.5rem;
-  margin: 5vw 15vw 0vw 15vw;
+  margin: 5vh auto;
   background-color:rgb(235,230,255);
+  width: 45rem;
 }
 a {
   text-decoration: none;
@@ -50,4 +51,10 @@ a {
 
   background: no-repeat url("Beardger/favicon.png");
   background-size: contain;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    width: 25rem;
+  }
 }
