@@ -1,9 +1,8 @@
 body {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 24px;
   margin: 5vh auto;
   background-color:rgb(235,230,255);
-  max-width: 45rem;
 }
 a {
   text-decoration: none;
@@ -13,10 +12,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 .portals {
-  flex: 1;
-  width: 35vw; min-width: 8rem;
+  flex: 0 1 10em;
   position: relative;
   margin: 0.6rem;
 
@@ -51,10 +50,4 @@ a {
 
   background: no-repeat url("Beardger/favicon.png");
   background-size: contain;
-}
-
-@media screen and (max-width: 36rem) {
-  body {
-    width: 25rem;
-  }
 }
