@@ -15,12 +15,12 @@
         <li> <a href="https://publicdomainvectors.org/"> Free icons </a> </li>
       </ul>
 
-    <button type="button" onclick="ShowBlogs()"> Blogs </button>
+    <button type="button" onclick=ShowElement("Blogs")> Blogs </button>
       <ul class="noshow" id="Blogs">
           <li> <a href="https://joelonsoftware.com/">Joel on Software</a> </li>
         </ul> <br>
 
-    <button type="button" onclick="ShowBaloba()"> Baloba </button>
+    <button type="button" onclick=ShowElement("Baloba")> Baloba </button>
       <ul class="noshow" id="Baloba">
           <li> Baloba </li>
         </ul> <br>
@@ -33,16 +33,10 @@
 
 
 <script type="text/javascript">
-    function ShowBlogs() {
-      var Blogs =  document.getElementById("Blogs") ;
-      Blogs.classList.toggle("show");
-      Blogs.scrollIntoView();
-      window.scrollBy(0,-50)
-    }
-    function ShowBaloba() {
-      var Blogs =  document.getElementById("Baloba") ;
-      Blogs.classList.toggle("show");
-      Blogs.scrollIntoView();
+    function ShowElement(id) {
+      var Element =  document.getElementById(id) ;
+      Element.classList.toggle("show");
+      Element.scrollIntoView();
       window.scrollBy(0,-50)
     }
 </script>
