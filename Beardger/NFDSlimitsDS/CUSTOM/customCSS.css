@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "SourceSerif";
+  src:  url("../dist/theme/fonts/source-serif-pro/SourceSerifPro-Light.otf") format("OpenType");
+}
+@font-face {
+  font-family: "SourceSerifBold";
+  src:  url("../dist/theme/fonts/source-serif-pro/SourceSerifPro-Bold.otf") format("OpenType");
+}
+@font-face {
+  font-family: "SourceSerifItalic";
+  src:  url("../dist/theme/fonts/source-serif-pro/SourceSerifPro-LightIt.otf") format("OpenType");
+}
+section, div {
+	font-family: "SourceSerif";
+}
+.title {
+	font-size: 3rem;
+	text-align: justify;
+	margin-bottom: 3rem;
+}
+.bold {
+	font-family: "SourceSerifBold"
+}
+p {
+	font-size: 1.8rem;
+}
+.university {
+	width: 200px;
+	float: right;
+	border-radius: 5px;
+}
+
+/* second slide */
+.box {
+	position: relative; 
+	width: 310px;
+	background-color: rgb(150, 150, 150, 0.3);
+	backdrop-filter: blur(100px);
+	border-radius: 20px;
+	margin: 12px auto;	
+}
+
+.box.arrow-bottomright:after {
+  content: " ";
+  position: absolute;
+  right: 25px;
+  bottom: -25px;
+  border-top: 25px solid rgb(140, 200, 250, 0.6);
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: none; 
+}
+.box.arrow-centered:after {
+  content: " ";
+  position: absolute;
+  right: 274px; 
+  border-top: 25px solid rgb(140, 200, 250, 0.6);
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: none; 
+}
+.arrow-centered {
+	width: 600px;
+}
+.box.arrow-bottomleft:after {
+  content: " ";
+  position: absolute;
+  left: 25px;
+  bottom: -25px;
+  border-top: 25px solid rgb(140, 200, 250, 0.6);
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: none; 
+}
+.box.top-box:before {
+  content: " ";
+  position: absolute;
+  left: 25px;
+  bottom: -25px;
+  border-top: 25px solid  rgb(140, 200, 250, 0.6);
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: none; 
+}
+img {
+	display: block;
+	border-radius: 30px;
+	width: 250px;
+	flex: 1 1 1; 
+}
+.slide-titles {
+	text-align: center;
+	font-family: "SourceSerifBold";
+	margin-bottom: 3rem;
+}
+.important-words {
+	border-bottom: 1px solid rgb(50, 50, 150, 0.6);
+
+}
+.larus {
+	position: absolute;
+	width: 150px;
+	top: 70%;
+	right: 3%;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.top-box {
+	grid-column: 1 / 3;
+  	grid-row: 1;
+	width: 500px;
+}
+.bottom-box {
+	grid-column: 1 / 3; 
+	grid-row: 5;
+	width: 700px;
+}
