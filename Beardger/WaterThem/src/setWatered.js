@@ -23,6 +23,7 @@ function resetWateredDays() {
 			document.getElementById(idString).classList.remove("alreadyWatered")
 		}
 	}
+	window.location.reload();
 }
 
 var currentDate = new Date();
