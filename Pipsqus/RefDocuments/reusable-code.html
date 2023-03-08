@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <title>Reusable Code</title>
+    <style>
+    	pre {
+    		white-space: pre-wrap;
+    	}
+    </style>
   </head>
   <body>
     <h1> My snippets of useful code</h1>
-      	<p> Salmy's background was removed using the following command:
-       	 <pre style="white-space: pre-wrap;"> convert picture.jpg -fill none -fuzz 22% -draw "matte 0,0 floodfill" -flop  -draw "matte 0,0 floodfill" -flip  -draw "matte 0,0 floodfill" -flop  -draw "matte 0,0 floodfill" -flip  result.png </pre>
+      	<p>Salmy's background was removed using the following command:
+       	 <pre>convert picture.jpg -fill none -fuzz 22% -draw "matte 0,0 floodfill" -flop  -draw "matte 0,0 floodfill" -flip  -draw "matte 0,0 floodfill" -flop  -draw "matte 0,0 floodfill" -flip  result.png</pre>
 
       Play with fuzz value to achieve different results
-      	</p> <hr>
+      	</p><hr>
 
 	<p>
 	  <a href="https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key">Stackexchange thread: push to Github with SSH</a> <br>
@@ -23,6 +28,25 @@
 	:%!jq to format JSON in vim
 	</p><hr>
 
+	<p>
+		First, create a new temporary branch and checkout.<br>
+		<pre>git checkout --orphan TEMP_BRANCH</pre>
+
+		Now, add all the current files to this temporary branch.<br>
+		<pre>git add -A</pre>
+
+		Create a new commit.<br>
+		<pre>git commit -am "Initial commit"</pre>
+
+		Delete the old branch. In my case, my old branch name is master. Check what’s yours and modify if necessary<br>
+		<pre>git branch -D master</pre>
+
+		Rename the temporary branch to your old branch name. Once again, my old branch was master. So, you should double-check our old branch name before deleting and renaming.<br>
+		<pre>git branch -m master</pre>
+
+		Finally, force push the code to the GitHub branch<br>
+		<pre>git push -f origin master</pre>
+	</p>
 
   </body>
 </html>
