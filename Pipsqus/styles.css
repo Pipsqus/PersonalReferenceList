@@ -1,0 +1,30 @@
+body {
+margin: 5vw 30vw 0vw 30vw;
+background-color:rgb(235,230,255);
+font-size: 18px;
+}
+h1 {
+  text-align: center;
+}
+button {
+  margin: 5px;
+  font-size: 20px;
+}
+a:visited, a:hover {
+  color: blue;
+}
+
+
+.noshow {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    margin: 5vw 2vw 2vw 5vw;
+    background-color:rgb(235,230,255 );
+  }
+}

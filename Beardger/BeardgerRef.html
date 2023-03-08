@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="../book.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Beardger References </title>
+  </head>
+  <body>
+    <h1> Reference List </h1>
+
+    <p style="font-size: 1.4rem"><a href="Pixel_Art_Degree/Pixel_Art_Degree.html">Pixel Art Degree</a></p>
+
+    <h2>Tools</h2>
+      <ul>
+      	<li> <a href="WaterThem/WaterThem.html"> WaterThem service </a> </li>
+        <li> <a href="https://publicdomainvectors.org/"> Free icons </a> </li>
+        <li> <a href="NFDSlimitsDS/index.html"> Presentation on NFDS limiting DS </a> </li>
+      </ul>
+
+    <button type="button" onclick=ShowElement("Homestead")>Homestead</button>
+      <ul class="noshow" id="Homestead">
+          <li> <a href="https://www.modulheim.de/haus/lf-home-2/">LF Home Modular House</a> </li>
+        </ul> <br>
+
+    <h2> Archive </h2>
+
+
+<script type="text/javascript">
+    function ShowElement(id) {
+      var Element =  document.getElementById(id) ;
+      Element.classList.toggle("show");
+      Element.scrollIntoView();
+      window.scrollBy(0,-50)
+    }
+</script>
+  </body>
+</html>

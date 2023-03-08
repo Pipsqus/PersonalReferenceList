@@ -1,0 +1,65 @@
+@media screen and (min-width: 400px) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+}
+}
+body {
+	max-width: 70vw;
+	margin: 5vh auto;
+	color: rgb(250, 250, 250);
+	text-align: center;
+}
+body::before {
+	content: "";
+	position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+	z-index: -2;
+	background-image: url(basil-pomodorini.jpg);
+	opacity: 1;
+	background-repeat: repeat;
+}
+h1 {
+	text-align: center;
+	font-size: 4rem;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 1rem;
+}
+.gridElement {
+	padding: 1rem;
+	font-size: 2.5rem;
+	text-align: center;
+	border-radius: 10px;
+	
+	backdrop-filter: blur(20px);
+}
+.gridElement:hover {
+	backdrop-filter: blur(100px);
+}
+.alreadyWatered {
+	background: rgb(220, 155, 50, 0.5);
+}
+input {
+	padding: 1rem;
+	font-size: 2.5rem;
+	color: white;
+	text-align: center;
+	border: none;
+	border-radius: 10px;
+    box-shadow:
+    0 0 0 3px rgb(222, 155, 114, 0.5),
+    0 0 0 8px rgb(222, 155, 114, 0.3);
+	background-color: rgb(182, 115, 74, 0.2);
+	
+	margin-top: 4rem;
+}
+input:active {
+	box-shadow:
+    0 0 0 3px rgb(222, 155, 114, 0.7),
+    0 0 0 8px rgb(222, 155, 114, 0.5);
+	background-color: rgb(182, 115, 74, 0.4);
+}
+

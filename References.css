@@ -1,0 +1,59 @@
+body {
+  text-align: center;
+  font-size: 24px;
+  margin: 5vh auto;
+  background-color:rgb(235,230,255);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.portals {
+  flex: 0 1 10em;
+  position: relative;
+  margin: 0.6rem;
+
+  padding: 3rem;
+  background: linear-gradient(90deg, rgba(50, 150, 200, 0.7), rgba(50, 200, 0, 0.7));
+  border-radius: 20px;
+
+  font-size: 2rem;
+}
+.portals:hover {
+  opacity: 0.9;
+}
+.portals:active {
+  box-shadow: 0.1rem -0.1rem 0.1rem 1px rgba(0, 0, 0, 0.15);
+}
+
+.portals:first-child::after {
+  content: "";
+  position: absolute;
+  margin-left: 1rem; margin-top: -0.5rem;
+  width: 60px; height: 60px;
+
+  background: no-repeat url("Pipsqus/favicon.png");
+  background-size: contain;
+}
+.portals:last-child::after {
+  content: "";
+  position: absolute;
+  margin-left: 1rem; margin-top: -0.5rem;
+  width: 60px; height: 60px;
+  border-radius: 30px;
+
+  background: no-repeat url("Beardger/favicon.png");
+  background-size: contain;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    max-width: 400px
+  }
+}
