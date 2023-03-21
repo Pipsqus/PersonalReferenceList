@@ -46,7 +46,14 @@
 
 		Finally, force push the code to the GitHub branch<br>
 		<pre>git push -f origin master</pre>
-	</p>
+	</p><hr>
+	
+	<p>
+	  If winegstreamer gives you trouble, by crashing the app on startup for example, disable it for the application.
+	  <pre>winecfg</pre>
+	  Add a profile for this specific app, and under Library:
+	  <pre>winegstreamer > disable</pre>
+	<p><hr>
 
   </body>
 </html>
