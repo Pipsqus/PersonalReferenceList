@@ -5,50 +5,65 @@
     <link rel="icon" href="../book.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Pipsqus References </title>
+    <title>Pipsqus References</title>
+    <script type="text/javascript">
+	function ShowElement(id) {
+		var Element = document.getElementById(id);
+		Element.classList.toggle("show");
+	}
+    </script>
   </head>
   <body>
-    <h1> Reference List </h1>
+    <h1>Reference List</h1>
 
-    My Websites
-    <ul>
-	<li><a href="https://pipsqus.github.io/Booty_Archive/">Booty Archive</a></li>
-	<li><a href="Game_Design_Degree/gameDesignDegree.html">Game Design Degree</a></li>
-	<li><a href="Computer_Science_&_Chinese/CS&ChineseDegree.html">Computer Science and Chinese Degree</a></li>
-	<li><a href="Digital_Painting_Degree/Digital_Painting_Degree.html">Digital Painting Degree</a></li>
-        <li><a href="https://pipsqus.github.io/MyGroceriesList/Spesa.html">Recipes</a></li>
-	<li><a href="https://pipsqus.github.io/Game_Ratings/">Game Ratings</a></li>
-	<li><a href="https://pipsqus.github.io/TinyList/TinyList.html">Tiny List</a></li>
-        <li>Some snippets of <a href="RefDocuments/reusable-code.html">useful code</a></li>
-	<li><a href="https://pipsqus.github.io/PeriodicCheck/">Periodic Check</a></li>
-    </ul><br>
+    <div class="flex">
+    <button type="button" onclick=ShowElement("MyWebsites")>My Websites
+	    <ul class="noshow" id="MyWebsites">
+		<li><a href="https://pipsqus.github.io/Booty_Archive/">Booty Archive</a></li>
+		<li><a href="https://pipsqus.github.io/MyGroceriesList/Spesa.html">Recipes</a></li>
+		<li><a href="https://pipsqus.github.io/Game_Ratings/">Game Ratings</a></li>
+		<li><a href="https://pipsqus.github.io/TinyList/TinyList.html">Tiny List</a></li>
+		<li><a href="RefDocuments/reusable-code.html">Useful code</a></li>
+		<li><a href="https://pipsqus.github.io/PeriodicCheck/">Periodic Check</a></li>
+	    </ul>
+    </button>
 
-	    Tools
-    <ul>
-	   <li><a href="https://search.marginalia.nu/">Marginalia</a></li>
-	   <li><a href="https://www.billiger.de">Billiger.de</a>, <a href="https://ko-fi.com/">ko-fi.com</a>, <a href="https://geizhals.de/">Geizhals</a>, <a href="https://www.refurbed.de/">Refurbed</a></li>
-	   <li><a href="https://lilypond.org">Lilypond</a></li>
-	   <li><a href="https://github.com/charmbracelet/">Charm CLI</a></li>
-    </ul><br>
+   <button type="button" onclick=ShowElement("Degrees")>Degrees
+    <ul class="noshow" id="Degrees">
+	<li><a href="Game_Design_Degree/gameDesignDegree.html">Game Design</a></li>
+	<li><a href="Digital_Painting_Degree/Digital_Painting_Degree.html">Digital Painting</a></li>
+	<li><a href="Computer_Science_&_Chinese/CS&ChineseDegree.html">Computer Science and Chinese</a></li>
+    </ul>
+   </button>
+   
+   <button type="button" onclick=ShowElement("Tools")>Tools
+	    <ul class="noshow" id="Tools">
+		<li><a href="https://search.marginalia.nu/">Marginalia</a></li>
+		<li><a href="https://www.billiger.de">Billiger.de</a>, <a href="https://ko-fi.com/">ko-fi.com</a>, <a href="https://geizhals.de/">Geizhals</a>, <a href="https://www.refurbed.de/">Refurbed</a></li>
+		<li><a href="https://lilypond.org">Lilypond</a></li>
+	    </ul>
+    </button>
 
-     <button type="button" onclick=ShowElement("Arrr")>Arrr</button>
+     <button type="button" onclick=ShowElement("Arrr")>Arrr
 	<ul class="noshow" id="Arrr">
-
-	   <li><a href="/https://freelinuxpcgames.com/">Free Linux PC Games</a></li>
+	   <li><a href="https://www.reddit.com/r/Piracy/wiki/megathread">Reddit Piracy Megathread</a></li>
+	   <li><a href="https://freelinuxpcgames.com/">Free Linux PC Games</a></li>
+	   <li><a href="https://elamigos.site/">elamigos</a></li>
 	   <li><a href="https://raddle.me/f/Piracy">Piracy on Raddle</a></li>
-	</ul><br>
-
+	</ul>
+     </button>
          
-     <button type="button" onclick=ShowElement("Games")>Games</button>
+     <button type="button" onclick=ShowElement("Games")>Games
 	<ul class="noshow" id="Games">
 		<li><a href="https://www.gamebanshee.com/icewinddaleii/">Gamebanshee, Icewind Dale 2</a></li>
         	<li><a href="https://pipsqus.github.io/battle-brothers-theory-crafting/melee-weapons.html">Battle Brothers</a></li>
 		<li><a href="https://powerlisting.fandom.com/wiki/Superpower_Wiki">SuperPower Wiki</a></li>
 		<li><a href="https://tvtropes.org/">Tv Tropes</a></li>
 		<li><a href="https://guidgenerator.com/online-guid-generator.aspx">GUID Generator</a></li>
-	</ul><br>
+	</ul>
+     </button>
 
-	<button type="button" onclick=ShowElement("Graphics")>Graphics</button>
+	<button type="button" onclick=ShowElement("Graphics")>Graphics
 	<ul class="noshow" id="Graphics">
 		<li><a href="https://publicdomainvectors.org/">Public domain vectors</a></li>
 		<li><a href="https://www.pexels.com/">Pexels</a></li>
@@ -59,10 +74,11 @@
 		<li><a href="https://collectie.antwerpen.be/">Dams Public Website</a></li>
 		<li><a href="https://www.flaticon.com/">Vector images</a></li>
 		<li><a href="https://excalidraw.com/">Excalidraw</a></li>
-	</ul> <br>
+	</ul>
+	</button>
 
-    <button type="button" onclick=ShowElement("Blogs")>Blogs</button>
-    <ul class="noshow" id="Blogs">
+    <button type="button" onclick=ShowElement("Blogs")>Blogs
+	<ul class="noshow" id="Blogs">
 	  <li><a href="https://drawabox.com">Draw a box</a></li>
 	  <li><a href="http://fantasy.gamberi.org/">Gamberi Fantasy</a></li>
           <li>Lesswrong, <a href="https://www.lesswrong.com/">Eliezer Yudkowsky</a></li>
@@ -89,34 +105,29 @@
           <li><a href="https://astralcodexten.substack.com">Astral Codex Ten</a></li>
           <li><a href="https://blog.royalsloth.eu/">Royal Sloth</a></li>
           <li><a href="https://acoup.blog/">A Collection of Unmitigated Pedantry</a></li>
-    </ul> <br>
+      </ul>
+    </button>
 
-   <button type="button" onclick=ShowElement("Mathematics")>Mathematics</button>
-    <ul class="noshow" id="Mathematics">
-          <li>Books for <a href="https://www.ocf.berkeley.edu/~abhishek/chicmath.htm"> undergraduate mathematics</a></li>
-          <li>Forde's list of books for <a href="https://marktomforde.com/academic/mathmajors/textbook-suggestions.html">Self Study</a></li>
-	</ul> <br>
-
-   <button type="button" onclick=ShowElement("Web")>Web Design</button>
+   <button type="button" onclick=ShowElement("Web")>Web Design
 	<ul class="noshow" id="Web">
 		<li><a href="https://bennettfeely.com/clippy/">Clippy</a> for polygonal backgrounds</li>
 		<li><a href="https://fontlibrary.org/">Fonts library</a></li>
 		<li><a href="https://www.leshylabs.com/apps/sstool/">Leshi SpriteSheet Generator</a></li>
 		<li><a href="https://www.browserling.com/tools/random-lines.org/">String randomizer at Browserly</a></li>
 		<li>Color palette <a href="http://paletton.com">helper</a></li>
-	</ul><br>
+	</ul>
+    </button>
 
-<h2>Archive</h2>
-    <button type="button" onclick=ShowElement("Fiction")>Fiction</button>
+    <button type="button" onclick=ShowElement("Fiction")>Fiction
       <ul class="noshow" id="Fiction">
           <li>Asimov, <a href="https://templatetraining.princeton.edu/sites/training/files/the_last_question_-_issac_asimov.pdf">The last question</a></li>
           <li>Ted Chiang, <a href="http://www.concatenation.org/futures/whatsexpected.pdf">What's expected of us</a></li>
           <li><a href="https://www.nature.com/nature/articles?type=futures">Nature fiction</a></li>
           <li><a href="https://ifdb.tads.org/">Interactive Fiction main</a></li>
-        </ul> <br>
+        </ul>
+    </button>
 
-    <button type="button" onclick=ShowElement("ComputerScience")>Computer Science</button>
-      <ul class="noshow" id="ComputerScience">
+    <button type="button" onclick=ShowElement("ComputerScience")>Computer Science      <ul class="noshow" id="ComputerScience">
         <li><a href="https://github.com/mikecao/umami">Web analytics</a> umami</li>
         <li>Leetcode <a href="https://labuladong.gitbook.io/algo-en/">fucking-algorithm</a></li>
         <li>System administration <a href="https://github.com/kahun/awesome-sysadmin">awesome-sysadmin</a></li>
@@ -132,55 +143,39 @@
         <li><a href="https://portier.github.io/">Portier, password authentication</a></li>
         <li><a href="https://threejs.org/">3D Javascript library</a></li>
         <li><a href="https://john-doe.neocities.org/">John Doe HTML page</a></li>
-        <li><a href="https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming">x86 Assembly Programming</a></li>
-        <li><a href="https://www.practical-go-lessons.com/">Go Lessons</a></li>
-	<li><a href="https://browser.engineering/index.html">Browser Engineering</a></li>
-      </ul> <br>
+    </button>
 
-    <button type="button" onclick=ShowElement("GameDevelopment")>Game Development</button> 
+    <button type="button" onclick=ShowElement("GameDevelopment")>Game Development
       <ul class="noshow" id="GameDevelopment">
         <li><a href="https://gameuidatabase.com">UI collection</a></li>
         <li><a href="https://deepknight.net/">DeepKnight game development</a></li>
-      </ul> <br>
-    
-	<button type="button" onclick=ShowElement("DoctorWho")>Doctor Who</button>
-        <ul class="noshow" id="DoctorWho">
-          <li>The Doctor deduces the origin of the Slytheen as <a href="https://www.youtube.com/watch?v=SjJ0azlyvxU">Raxacoricophallapatorius</a></li>
-          <li>Song of <a href="https://www.youtube.com/watch?v=1D5Ucn6YAAk">Captivity and Freedom</a></li>
-          <li>The story of <a href="https://www.youtube.com/watch?v=bv0GtQETZNM">Harriet Jones</a></li>
-          <li>Donna Noble has left the <a href="https://www.youtube.com/watch?v=dEwxYegcCDM">library</a></li>
-          <li>Do not be alarmed. <a href="https://www.youtube.com/watch?v=5Dx9O0yJePI">This is a kindness</a></li>
-          <li>Madrid? Ha! What a dump. <a href="#">I HAVE to stay</a></li>
-          <li>Do you hear <a href="https://www.youtube.com/watch?v=CFjROOcTo8c">the Whisper Men?</a></li>
-          <li>Tick tock <a href="https://www.youtube.com/watch?v=l08b6wofyA0">goes the clock</a></li>
-          <li><a href="https://www.youtube.com/watch?v=b7TpRgUCzlE">You hag! You perfidious hag! You Virago!</a></li>
-        </ul> <br>
+      </ul>
+    </button>
 
-
-    <button type="button" onclick=ShowElement("Medicine")>Medicine</button>
-      <ul class="noshow" id="Medicine">
+    <button type="button" onclick=ShowElement("Medicine")>Medicine     
+     <ul class="noshow" id="Medicine">
         <li>Fawcett, <i> <a href="https://www.ascb.org/career-development/teaching/don-fawcetts-the-cell/">The Cell</a></i></li>
         <li><a href="RefDocuments/BRAYGlucose.html">Bray, A Gut Instinct for Glucose</a></li>
-        <li><a href="http://www.visualcapitalist.com/wp-content/uploads/2017/09/cognitive-bias.jpg">Cognitive Biases</a></li>
-		
-      </ul> <br>
+        <li><a href="RefDocuments/cognitive-bias.jpg">Cognitive Biases</a></li>
+      </ul> 
 
-
-    <button type="button" onclick=ShowElement("Sonstige")>Fun</button>
+    <button type="button" onclick=ShowElement("Sonstige")>Fun
       <ul class="noshow" id="Sonstige">
         <li><a href="https://en.wikipedia.org/wiki/Irving_Finkel">Irving Finkel</a></li>
         <li><a href="https://etc.usf.edu/lit2go/">Lit2Go</a></li>
         <li><a href="https://www.youtube.com/watch?v=X6ALZsTmW1w">Abbot quotes</a></li>
-      </ul> <br>
+	<li>The Doctor deduces the origin of the Slytheen as <a href="https://www.youtube.com/watch?v=SjJ0azlyvxU">Raxacoricophallapatorius</a></li>
+        <li>Song of <a href="https://www.youtube.com/watch?v=1D5Ucn6YAAk">Captivity and Freedom</a></li>
+        <li>The story of <a href="https://www.youtube.com/watch?v=bv0GtQETZNM">Harriet Jones</a></li>
+        <li>Donna Noble has left the <a href="https://www.youtube.com/watch?v=dEwxYegcCDM">library</a></li>
+        <li>Do not be alarmed. <a href="https://www.youtube.com/watch?v=5Dx9O0yJePI">This is a kindness</a></li>
+        <li>Madrid? Ha! What a dump. <a href="#">I HAVE to stay</a></li>
+        <li>Do you hear <a href="https://www.youtube.com/watch?v=CFjROOcTo8c">the Whisper Men?</a></li>
+        <li>Tick tock <a href="https://www.youtube.com/watch?v=l08b6wofyA0">goes the clock</a></li>
+        <li><a href="https://www.youtube.com/watch?v=b7TpRgUCzlE">You hag! You perfidious hag! You Virago!</a></li>
+      </ul>
+      </button>
+      </div>
 
-
-<script type="text/javascript">
-	function ShowElement(id) {
-		var Element = document.getElementById(id);
-		Element.classList.toggle("show");
-		Element.scrollIntoView();
-		window.scrollBy(0, -50);
-	}
-</script>
   </body>
 </html>
