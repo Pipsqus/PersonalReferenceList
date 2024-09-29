@@ -1,15 +1,15 @@
 body {
 	margin: 5vw;
 	background-color:rgb(235,230,255);
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 }
 h1 {
 	text-align: center;
 }
 button {
 	margin: 5px;
-	font-size: 1.5rem;
-	padding: 15px;
+	font-size: 1.3rem;
+	padding: 10px;
 	width: 250px;
 }
 li {
