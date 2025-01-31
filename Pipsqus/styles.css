@@ -6,11 +6,13 @@ body {
 h1 {
 	text-align: center;
 }
-button {
+.category {
 	margin: 5px;
 	font-size: 1.3rem;
 	padding: 15px;
 	width: 200px;
+	text-align: center;
+	backdrop-filter: invert;
 }
 li {
 	font-size: 1.1rem;
@@ -40,3 +42,10 @@ a:visited, a:hover {
     background-color:rgb(235,230,255);
   }
 }
+
+document.getElementByType("a[href^='https']").each(function() {
+  $(this).css({
+    background: "url(https://www.google.com/s2/favicons?domain=" + this.hostname + ") left center no-repeat",
+    "padding-left": "20px"
+  });
+});
