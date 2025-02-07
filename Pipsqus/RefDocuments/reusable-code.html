@@ -82,5 +82,12 @@
 	Monitor traffic activity 
 	<pre>sudo netstat -atupen | grep ESTABLISHED</pre>
 	<p><hr>
+
+	<p>
+	Clear system logs
+	<pre>sudo journalctl --vacuum-time=2d
+	sudo journalctl --vacuum-size=100M
+	journalctl --vacuum-files=5</pre>
+	<p><hr>
   </body>
 </html>
