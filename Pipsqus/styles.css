@@ -28,7 +28,8 @@ a:visited, a:hover {
 	height: calc(100vh - 4vh);
 }
 .flex > * {
-	flex: 1 1 auto;
+	flex: 1 0 29%;
+	min-width: 200px;
 }
 .noshow {
 }
