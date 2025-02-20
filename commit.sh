@@ -1,6 +1,6 @@
 #!/bin/sh
 git config pull.rebase false
-git pull
+git pull --no-commit
 git add --all
 timestamp() {
   date +"at %H:%M:%S on %d/%m/%Y"
