@@ -1,0 +1,29 @@
+# USEFUL CODE
+
+## Stackexchange thread: push to Github with SSH
+git remote set-url origin git@github.com:Pipsqus/~Name Repository~.git
+
+## :%!jq to format JSON in vim
+
+## winecfg → winegstreamer → disable
+
+## Setting Nemo as default over Nautilus: right click on a folder, and select Nemo as the default application!
+
+## Swap file:
+		sudo swapoff -a
+		sudo fallocate -l 2G /mnt/mynewdrive/swapfile 
+		sudo mkswap /mnt/mynewdrive/swapfile
+		sudo nano /etc/fstab
+		sudo swapon /mnt/mynewdrive/swapfile 
+		sudo swapon --show 
+		
+## Install a clean WINEPREFIX="/home/username/Desktop/.newPrefix" to add different winetricks or test other things.
+Check fonts, vcrun, d3d, dxvk
+
+## Monitor traffic activity
+sudo netstat -atupen | grep ESTABLISHED
+
+## Clear system logs
+	sudo journalctl --vacuum-time=2d
+	sudo journalctl --vacuum-size=100M
+	journalctl --vacuum-files=5
