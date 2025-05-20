@@ -7,7 +7,7 @@ git remote set-url origin git@github.com:Pipsqus/~Name Repository~.git
 
 ## winecfg → winegstreamer → disable
 
-## Setting Nemo as default over Nautilus: right click on a folder, and select Nemo as the default application!
+## about:about
 
 ## Swap file:
 		sudo swapoff -a
@@ -17,9 +17,6 @@ git remote set-url origin git@github.com:Pipsqus/~Name Repository~.git
 		sudo swapon /mnt/mynewdrive/swapfile 
 		sudo swapon --show 
 		
-## Install a clean WINEPREFIX="/home/username/Desktop/.newPrefix" to add different winetricks or test other things.
-Check fonts, vcrun, d3d, dxvk
-
 ## Monitor traffic activity
 sudo netstat -atupen | grep ESTABLISHED
 
