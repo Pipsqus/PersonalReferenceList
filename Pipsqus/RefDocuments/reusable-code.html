@@ -1,7 +1,7 @@
 <pre>
 # USEFUL CODE
 
-## Stackexchange thread: push to Github with SSH
+## push to Github with SSH
 git remote set-url origin git@github.com:Pipsqus/~Name Repository~.git
 
 ## :%!jq to format JSON in vim
@@ -10,7 +10,7 @@ git remote set-url origin git@github.com:Pipsqus/~Name Repository~.git
 
 ## Swap file:
 		sudo swapoff -a
-		sudo fallocate -l 2G /mnt/mynewdrive/swapfile 
+		sudo fallocate -l 8G /mnt/mynewdrive/swapfile 
 		sudo mkswap /mnt/mynewdrive/swapfile
 		sudo nano /etc/fstab
 		sudo swapon /mnt/mynewdrive/swapfile 
@@ -23,11 +23,14 @@ sudo netstat -atupen | grep ESTABLISHED
 	sudo journalctl --vacuum-time=2d
 	sudo journalctl --vacuum-size=100M
 	journalctl --vacuum-files=5
-	
-## [org/cinnamon/desktop/privacy]
-remember-recent-files=false
 
 ## WINE STUFF
 winecfg → winegstreamer → disable
-overriding dll in Lutris or winecfg to use a supplied dll instead of one built-in
+override dll in Lutris/winecfg: supply a dll over a built-in dll
+
+## dconf settings
+dconf dump / > dconf-settings
+dconf load / < dconf-settings
+[org/cinnamon/desktop/privacy]
+remember-recent-files=false
 </pre>
