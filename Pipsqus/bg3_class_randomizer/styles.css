@@ -1,0 +1,12 @@
+body {
+	text-align: center;
+}
+button {
+	font-size: 1.5em;
+}
+demo_div {
+	white-space: pre;
+}
+hr {
+	width: 50%;
+}
