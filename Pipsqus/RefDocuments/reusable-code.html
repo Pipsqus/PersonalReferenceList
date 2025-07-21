@@ -33,4 +33,7 @@ dconf dump / > dconf-settings
 dconf load / < dconf-settings
 [org/cinnamon/desktop/privacy]
 remember-recent-files=false
+
+## Link a new library when an older one is needed
+ln -s /lib/x86_64-linux-gnu/libFLAC.so.12.0.0 libFLAC.so.8
 </pre>
