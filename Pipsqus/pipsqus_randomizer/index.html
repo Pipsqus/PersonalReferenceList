@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Class Randomizer - BG3</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -14,6 +13,12 @@
 
 <body>
   <h1>Randomizer</h1>
+  	<select id="exclusion-criteria">
+  		<option value="no-repeat-subclasses" selected>Avoid repeated subclasses</option>
+  		<option value="no-repeat-classes">Avoid repeated classes</option>
+  		<option value="no-repeat-groups">Avoid repeated roles</option>
+  		<option value="any">Any</option>
+  	</select>
   	<div>
   		<button id="generate_fully_random">Party - no repeated subclasses</button><br>
   	</div><br>
