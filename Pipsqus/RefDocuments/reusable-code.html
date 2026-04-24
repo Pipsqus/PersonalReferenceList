@@ -40,6 +40,11 @@ ln -s /lib/x86_64-linux-gnu/libFLAC.so.12.0.0 libFLAC.so.8
 ## grep in subdirectories
 grep -rni "string" *
 
-## unzip for unsupported algorithms
+## unzip for files archived with unsupported algorithms
 bsdtar -xf filename.zip
+
+## timidity++ config file. change soundfont by specifying one
+sudo gedit /etc/timidity/timidity.cfg
+soundfont $HOME/soundfonts/my-sound-font.sf2
+
 </pre>
