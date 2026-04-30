@@ -1,7 +1,7 @@
 function bg3_getData() {
 	const number_party_members = 4;
 
-	const multiclass_chance = 65;
+	const multiclass_chance = 55;
 	const multiclass_maxTotal = 2;
 
 	const character_options = {
@@ -92,3 +92,4 @@ function bg3_getData() {
 		character_options
 	}
 }
+

@@ -1,12 +1,21 @@
 body {
 	text-align: center;
 }
-button {
-	font-size: 1.5em;
-}
-demo_div {
-	white-space: pre;
-}
 hr {
 	width: 50%;
+}
+button {
+	text-align: center;
+	padding: 0px;
+	margin: 0.65em 0 0.65em 0;
+}
+button img {
+	vertical-align: middle;
+	width: 180px;
+}
+party_container {
+	display: flex;
+}
+party_element {
+	flex: 1 1 100px;
 }

@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Class Randomizer - BG3</title>
+  <title>Class Randomizer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.png">
-  <script src="class_data_bg3.js"></script>
+  <script src="class_data/bg3.js"></script>
+  <script src="class_data/sunderfolk.js"></script>
 </head>
 
 <body>
@@ -19,12 +20,13 @@
   		<option value="no-repeat-groups">Avoid repeated roles</option>
   		<option value="any">Any</option>
   	</select>
-  	<div>
-  		<button id="generate_fully_random">Party - no repeated subclasses</button><br>
-  	</div><br>
-  	<div id="demo_div"></div>
+  	<div class="game_list">
+  		<button id="bg3"><img src="game_icon/bg3.jpg"></button>
+  		<button id="sunderfolk"><img src="game_icon/sunderfolk.jpg"></button><br>
+  	</div>
   	
-  	<script src="randomizer.js"></script>
+
+  	<script src="script/randomizer.js"></script>
 </body>
 
 </html>
