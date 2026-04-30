@@ -1,10 +1,12 @@
-function bg3_getData() {
-	const number_party_members = 4;
+let bg3_data = {
+	number_party_members : 4,
 
-	const multiclass_chance = 55;
-	const multiclass_maxTotal = 2;
+	multiclass_chance : 55,
+	multiclass_maxTotal : 2,
+	
+	has_subclasses : true,
 
-	const character_options = {
+	character_options : {
 		caster_arcane : {
 			Warlock : 
 				["The Fiend", 
@@ -83,13 +85,5 @@ function bg3_getData() {
 				"Way of Shadow", 
 				"Way of the Drunken Master"]
 		}
-	};
-	
-	return {
-		number_party_members, 
-		multiclass_chance,
-		multiclass_maxTotal,
-		character_options
-	}
+	},
 }
-

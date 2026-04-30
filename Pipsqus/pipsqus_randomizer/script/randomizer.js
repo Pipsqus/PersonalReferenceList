@@ -2,15 +2,13 @@ function generate_random_number(max) {
     return Math.floor(Math.random() * max);
 }
 
-function generate_random_party(function_generating, button_element) {
+function generate_random_party(data_object, button_element) {
 
-	const {
-		number_party_members, 
-		multiclass_chance, 
-		multiclass_maxTotal,
-		character_options
-	} = function_generating(); 
-	// gives direct access to these variables; no need to reference any object from here
+	let number_party_members = data_object.number_party_members
+	let multiclass_chance = data_object.multiclass_chance
+	let multiclass_maxTotal = data_object.multiclass_maxTotal
+	let has_subclasses = data_object.has_subclasses
+	let character_options = data_object.character_options
 		
 	let multiclass_granted = 0;
 	let decision_string = "";
@@ -20,6 +18,22 @@ function generate_random_party(function_generating, button_element) {
 	let already_selected_subclasses = [];
 	let subclass_groupings = Object.entries(character_options);
 		
+	// partyContainer to hold the list of characters
+	let partyContainer = button_element.nextElementSibling;
+	if (!partyContainer || !partyContainer.classList.contains("party-container")) {
+		partyContainer = document.createElement("div");
+		partyContainer.classList.add("party-container");
+		button_element.insertAdjacentElement("afterend", partyContainer);
+		j = document.createElement("span");
+	}
+	
+	var error_divs = document.getElementsByClassName("error");
+	while(error_divs.length > 0){
+        error_divs[0].parentNode.removeChild(error_divs[0]);
+    }
+
+	
+		
 	for (let i=0; i<number_party_members; i++) {
 		let selected_group = subclass_groupings[generate_random_number(subclass_groupings.length)]
 		let selected_group_object = selected_group[1]
@@ -28,24 +42,36 @@ function generate_random_party(function_generating, button_element) {
 		let selected_class_array = selected_group_array[generate_random_number(selected_group_array.length)]
 		let selected_class = selected_class_array[0];
 		
-		let selected_subclass = selected_class_array[1][generate_random_number(selected_class_array[1].length)];
+		if (has_subclasses) {
+			var selected_subclass = selected_class_array[1][generate_random_number(selected_class_array[1].length)];
+		} 
+		
 		
 		switch (document.getElementById("exclusion-criteria").value) {
 		  	case "no-repeat-subclasses":
-				if (already_selected_subclasses.includes(selected_subclass)) {
-					generate_random_party(function_generating, button_element)
+		  		if (!has_subclasses) {
+					partyContainer.innerHTML = "";
+					error_no_subclasses_div = document.createElement("div");
+					error_message = "This game doesn't support subclasses";
+					error_no_subclasses_div.textContent += `${error_message}`;
+					error_no_subclasses_div.classList.add("error");
+					partyContainer.append(error_no_subclasses_div);
+					return
+				} else if (already_selected_subclasses.includes(selected_subclass))
+				{
+					generate_random_party(data_object, button_element)
 					return
 				}
 				break;
 		  	case "no-repeat-classes":
 			  	if (already_selected_classes.includes(selected_class)) {
-						generate_random_party(function_generating, button_element)
+						generate_random_party(data_object, button_element)
 						return
 					};
 				break;
 		  	case "no-repeat-groups":
 				if (already_selected_groups.includes(selected_group)) {
-						generate_random_party(function_generating, button_element)
+						generate_random_party(data_object, button_element)
 						return
 				}
 				break;
@@ -53,7 +79,7 @@ function generate_random_party(function_generating, button_element) {
 				break;
 		}
 		
-		if (selected_subclass == "") {
+		if (!has_subclasses) {
 			decision_string = selected_class + " ";
 		} else {
 			decision_string = selected_class.toUpperCase() + " - " + selected_subclass + " ";
@@ -64,16 +90,6 @@ function generate_random_party(function_generating, button_element) {
 		already_selected_groups.push(selected_group);
 	}
 		
-	// Check if container already exists
-		let partyContainer = button_element.nextElementSibling;
-		if (!partyContainer || !partyContainer.classList.contains("party-container")) {
-	  // Create container only if it doesn't exist
-	  partyContainer = document.createElement("div");
-	  partyContainer.classList.add("party-container");
-	  button_element.insertAdjacentElement("afterend", partyContainer);
-	  i = document.createElement("span");
-	}
-
 	
 	for (element in current_party) {
 		element_to_append = document.createElement("div");
@@ -98,10 +114,10 @@ function generate_random_party(function_generating, button_element) {
 
 
 document.getElementById("bg3").addEventListener('click', function() {
-    generate_random_party(bg3_getData, this);
+    generate_random_party(bg3_data, this);
 });
 
 document.getElementById("sunderfolk").addEventListener('click', function() {
-    generate_random_party(sunderfolk_getData, this);
+    generate_random_party(sunderfolk_data, this);
 });
 
