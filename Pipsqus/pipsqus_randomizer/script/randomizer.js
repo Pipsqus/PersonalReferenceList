@@ -112,12 +112,3 @@ function generate_random_party(data_object, button_element) {
 	
 }
 
-
-document.getElementById("bg3").addEventListener('click', function() {
-    generate_random_party(bg3_data, this);
-});
-
-document.getElementById("sunderfolk").addEventListener('click', function() {
-    generate_random_party(sunderfolk_data, this);
-});
-
