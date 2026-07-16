@@ -282,7 +282,8 @@ let sunderfolk_data = {
 	multiclass_maxTotal : 0,
 	
 	has_subclasses : false,
-
+	
+	companion_options : false,
 	character_options : {
 		caster_arcane : {
 			"Arcanist" : 

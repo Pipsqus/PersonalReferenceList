@@ -11,12 +11,12 @@ function set_randomizer_to_classes() {
 		menu_buttons[i].style.border = "0";
 	}
 	document.getElementById("button_classes").style.filter = "brightness(130%)";
-	document.getElementById("button_classes").style.border = "3px solid";
+	document.getElementById("button_classes").style.border = "4px solid";
 	
 	current_randomization_choice = "classes";
 	
 	// reinitialize partyContainer since the randomization selection changed
-	let party_container_array = document.getElementsByClassName("party-container");
+	let party_container_array = document.getElementsByClassName("party_container");
 	for (i=0; i < party_container_array.length; i++) {
 		party_container_array[i].innerHTML = "";
 	}
@@ -25,6 +25,8 @@ function set_randomizer_to_classes() {
 		for (let i=0; i < game_list_div.length; i++) {
 			game_list_div[i].classList.remove("hidden");
 		};
+		
+	document.getElementById("exclusion-criteria-div").classList.remove("hidden")
 }
 function set_randomizer_to_companions() {
 	let menu_buttons = document.getElementsByClassName("menu_item");
@@ -33,12 +35,12 @@ function set_randomizer_to_companions() {
 		menu_buttons[i].style.border = "0";
 	}
 	document.getElementById("button_companions").style.filter = "brightness(130%)";
-	document.getElementById("button_companions").style.border = "3px solid";
+	document.getElementById("button_companions").style.border = "4px solid";
 	
 	current_randomization_choice = "companions";
 	
 	// reinitialize partyContainer since the randomization selection changed
-	let party_container_array = document.getElementsByClassName("party-container");
+	let party_container_array = document.getElementsByClassName("party_container");
 	for (i=0; i < party_container_array.length; i++) {
 		party_container_array[i].innerHTML = "";
 	}
@@ -47,6 +49,8 @@ function set_randomizer_to_companions() {
 		for (let i=0; i < game_list_div.length; i++) {
 			game_list_div[i].classList.remove("hidden");
 		};
+		
+	document.getElementById("exclusion-criteria-div").classList.add("hidden")
 }
 
 function run_randomization_function(data_object, button_element) {
@@ -75,12 +79,11 @@ function generate_random_party_classes(data_object, button_element) {
 		
 	// partyContainer to hold the list of characters
 	let partyContainer = button_element.nextElementSibling;
-	if (!partyContainer || !partyContainer.classList.contains("party-container")) {
-		partyContainer = document.createElement("div");
-		partyContainer.classList.add("party_container");
-		button_element.insertAdjacentElement("afterend", partyContainer);
-		j = document.createElement("span");
-	}
+	partyContainer = document.createElement("div");
+	partyContainer.classList.add("party_container");
+	button_element.insertAdjacentElement("afterend", partyContainer);
+	j = document.createElement("span");
+
 	
 	var error_divs = document.getElementsByClassName("error");
 	while(error_divs.length > 0){
@@ -177,10 +180,50 @@ function generate_random_party_companions(data_object, button_element) {
 		
 	// partyContainer to hold the list of characters
 	let partyContainer = button_element.nextElementSibling;
-	if (!partyContainer || !partyContainer.classList.contains("party-container")) {
-		partyContainer = document.createElement("div");
-		partyContainer.id = "party_container";
-		button_element.insertAdjacentElement("afterend", partyContainer);
-		j = document.createElement("span");
+	partyContainer = document.createElement("div");
+	partyContainer.classList.add("party_container");
+	button_element.insertAdjacentElement("afterend", partyContainer);
+	j = document.createElement("span");
+	
+	var error_divs = document.getElementsByClassName("error");
+	while(error_divs.length > 0){
+        error_divs[0].parentNode.removeChild(error_divs[0]);
+    }
+
+
+	for (let i=0; i<number_party_members; i++) {
+		let selected_companion = companion_options[generate_random_number(companion_options.length)]
+		
+		if (!companion_options) {
+					partyContainer.innerHTML = "";
+					error_no_subclasses_div = document.createElement("div");
+					error_message = "This game doesn't support companions";
+					error_no_subclasses_div.textContent += `${error_message}`;
+					error_no_subclasses_div.classList.add("error");
+					partyContainer.append(error_no_subclasses_div);
+					return
+				} else if (already_selected_companions.includes(selected_companion))
+				{
+					generate_random_party_companions(data_object, button_element)
+					return
+				}
+				
+		decision_string = selected_companion + " ";
+		
+		current_party.push(decision_string);
+		already_selected_companions.push(selected_companion);
 	}
+	
+	for (i=0; i<current_party.length; i++) {
+		element_to_append = document.createElement("div");
+		element_to_append.classList.add("party_element");
+		element_to_append.textContent += `${current_party[i]}`;
+		partyContainer.prepend(element_to_append);
+	
+		if (i == (0)) {
+			const hr = document.createElement("hr");
+			element_to_append.insertAdjacentElement("afterend", hr);
+		}
+	}
+
 }
