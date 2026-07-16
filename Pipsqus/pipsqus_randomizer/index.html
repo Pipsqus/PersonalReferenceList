@@ -8,24 +8,45 @@
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.png">
-  <script src="class_data/class_data.js"></script>
+  <script src="data/class_data.js"></script>
   <script src="script/randomizer.js"></script>
 </head>
 
 <body>
-  <h1>Randomizer</h1>
+  	<h1>Randomizer</h1>
+
+	<menu>
+		<button class="menu_item" id="button_classes" onclick="set_randomizer_to_classes()">
+			<svg class="svg_icon" viewBox="0 0 24 24" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(0deg); --darkreader-inline-color: var(--darkreader-text-4a5565, #b1aaa0);" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" style="--darkreader-inline-stroke: currentColor;"><path d="M5.06 21.06a1.5 1.5 0 1 1-2.12-2.121a1.5 1.5 0 0 1 2.12 2.122Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="m8 16l-2.5 2.5"></path><path stroke-linejoin="round" d="m9.5 16.5l10.573-9.297a1.73 1.73 0 0 0 .554-.92L21.5 2.5l-3.783.873a1.73 1.73 0 0 0-.92.554L7.5 14.5"></path><path stroke-linecap="round" stroke-linejoin="round" d="M4 13h.572a2 2 0 0 1 1.414.586l4.428 4.428A2 2 0 0 1 11 19.428V20"></path></g></svg>
+		Classes
+		</button>
+		
+		<button class="menu_item" id="button_companions" onclick="set_randomizer_to_companions()">
+			<svg class="svg_icon" role="img" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(0deg);" width="48" height="48" viewBox="0 0 24 24">
+			  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+			  <path d="M1 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1"></path>
+			  <path d="M13 14v0a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v.5"></path>
+			  <path stroke-linejoin="round" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8m10-3a3 3 0 1 0 0-6a3 3 0 0 0 0 6"></path>
+			</g></svg>
+		Party
+		</button>
+	</menu>
+  
+  <div>
   	<select id="exclusion-criteria">
   		<option value="no-repeat-subclasses">Avoid repeated subclasses</option>
   		<option value="no-repeat-classes" selected>Avoid repeated classes</option>
   		<option value="no-repeat-groups">Avoid repeated roles</option>
   		<option value="any">Any</option>
   	</select>
+  	
   	<div class="game_list">
-  		
   	</div>
   	
+  	
 
-    <script src="script/game_list.js"></script>
+  	
+  <script src="script/game_list.js"></script>
 </body>
 
 </html>
