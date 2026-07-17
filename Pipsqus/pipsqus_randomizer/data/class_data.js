@@ -1,12 +1,14 @@
 let solasta_data = {
 	game_name : "solasta",
-	number_party_members : 4,
+	classes_to_roll : 4,
+	companions_to_roll : 0,
 
 	multiclass_chance : 55,
 	multiclass_maxTotal : 0,
 	
 	has_subclasses : true,
 
+	companion_options : false,
 	character_options : {
 		caster_arcane : {
 			"Artificer" : 
@@ -181,13 +183,15 @@ let solasta_data = {
 
 let bg3_data = {
 	game_name : "bg3",
-	number_party_members : 4,
+	classes_to_roll : 4,
+	companions_to_roll : 3,
 
 	multiclass_chance : 55,
 	multiclass_maxTotal : 2,
 	
 	has_subclasses : true,
-
+	
+	companion_options : ["Astarion", "Gale", "Karlach", "Lae\'zel", "Shadowheart", "Wyll", "Halsin", "Jaheira", "Minsc", "Minthara"],
 	character_options : {
 		caster_arcane : {
 			"Warlock" : 
@@ -276,14 +280,15 @@ let bg3_data = {
 
 let sunderfolk_data = {
 	game_name : "sunderfolk",
-	number_party_members : 4,
+	classes_to_roll : 4,
+	companions_to_roll : 4,
 
 	multiclass_chance : 0,
 	multiclass_maxTotal : 0,
 	
 	has_subclasses : false,
 	
-	companion_options : false,
+	companion_options : ["Arcanist", "Pyromancer", "Bard", "Berserker", "Vanguard", "Ranger", "Rogue"],
 	character_options : {
 		caster_arcane : {
 			"Arcanist" : 
@@ -316,93 +321,68 @@ let sunderfolk_data = {
 
 let roguetrader_data = {
 	game_name : "roguetrader",
-	number_party_members : 4,
+	classes_to_roll : 5,
+	companions_to_roll : 4,
 
-	multiclass_chance : 100,
-	multiclass_maxTotal : 2,
+	multiclass_chance : 0,
+	multiclass_maxTotal : 0,
 	
 	has_subclasses : true,
 
 	companion_options : ["Abelard", "Idira", "Argenta", "Cassia", "Pasqal", "Heinrix", "Jae", "Yrliet", "Marazhai", "Ulfar", "Kibellah", "Solomorne", "Eogunn"],
 	character_options : {
-		caster_arcane : {
-			"Warlock" : 
-				["The Fiend", 
-				"The Great Old One", 
-				"The Archfey", 
-				"The Hexblade"],
-			"Wizard" : 
-				["Abjuration School", 
-				"Evocation School", 
-				"Necromancy School", 
-				"Conjuration School", 
-				"Enchantment School", 
-				"Divination School", 
-				"Illusion School", 
-				"Transmutation School", 
-				"Bladesinging"],
-			"Sorcerer" : 
-				["Wild Magic", 
-				"Draconic Bloodline", 
-				"Storm Sorcery", 
-				"Shadow Magic"]
+		frontline : {
+			"Bladedancer" : 
+				["Arch-Militant",
+				"Assassin",
+				"Bounty Hunter",
+				"Executioner",
+				"Grand Strategist",
+				"Master Tactician",
+				"Overseer",
+				"Vanguard"],
+			"Warrior" : 
+				["Arch-Militant",
+				"Assassin",
+				"Bounty Hunter",
+				"Executioner",
+				"Grand Strategist",
+				"Master Tactician",
+				"Overseer",
+				"Vanguard"],
 		},
-		caster_divine : {
-			"Bard" : 
-				["College of Lore", 
-				"College of Valour", 
-				"College of Swords", 
-				"College of Glamour"],
-			"Cleric" : 
-				["Life Domain", 
-				"Light Domain", 
-				"Trickery Domain", 
-				"Knowledge Domain", 
-				"Nature Domain", 
-				"Tempest Domain", 
-				"War Domain", 
-				"Death Domain"],
-			"Druid" : 
-				["Circle of the Land", 
-				"Circle of the Moon", 
-				"Circle of the Spores", 
-				"Circle of the Stars"]
+		support : {
+			"Officer" : 
+				["Arch-Militant",
+				"Assassin",
+				"Bounty Hunter",
+				"Executioner",
+				"Grand Strategist",
+				"Master Tactician",
+				"Overseer",
+				"Vanguard"],
+			"Operative" : 
+				["Arch-Militant",
+				"Assassin",
+				"Bounty Hunter",
+				"Executioner",
+				"Grand Strategist",
+				"Master Tactician",
+				"Overseer",
+				"Vanguard"],
+				
 		},
-		fighters_basic : {
-			"Fighter" : 
-				["Battle Master", 
-				"Eldritch Knight", 
-				"Champion", 
-				"Arcane Archer"],
-			"Barbarian" : 
-				["Berserker", 
-				"Wild Magic", 
-				"Wildheart", 
-				"Giant"],
-			"Rogue" : 
-				["Thief", 
-				"Arcane Trickster", 
-				"Assassin", 
-				"Swashbuckler"]
+		damage : {
+			"Soldier" : 
+				["Arch-Militant",
+				"Assassin",
+				"Bounty Hunter",
+				"Executioner",
+				"Grand Strategist",
+				"Master Tactician",
+				"Overseer",
+				"Vanguard"],
 		},
-		fighters_divine : {
-			"Paladin" : 
-				["Oath of the Ancients", 
-				"Oath of Devotion", 
-				"Oath of Vengeance", 
-				"Oath of the Crown", 
-				"Oathbreaker"],
-			"Ranger" : 
-				["Hunter", 
-				"Beast Master", 
-				"Gloom Stalker", 
-				"Swarmkeeper"],
-			"Monk" : 
-				["Way of the Four Elements", 
-				"Way of the Open Hand", 
-				"Way of Shadow", 
-				"Way of the Drunken Master"]
-		}
 	}
 };
 

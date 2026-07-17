@@ -27,7 +27,8 @@ function set_randomizer_to_classes() {
 		};
 		
 	document.getElementById("exclusion-criteria-div").classList.remove("hidden")
-}
+};
+
 function set_randomizer_to_companions() {
 	let menu_buttons = document.getElementsByClassName("menu_item");
 	for (i=0; i < menu_buttons.length; i++) {
@@ -51,7 +52,7 @@ function set_randomizer_to_companions() {
 		};
 		
 	document.getElementById("exclusion-criteria-div").classList.add("hidden")
-}
+};
 
 function run_randomization_function(data_object, button_element) {
 	if (current_randomization_choice == "classes") {
@@ -63,7 +64,7 @@ function run_randomization_function(data_object, button_element) {
 
 function generate_random_party_classes(data_object, button_element) {
 
-	let number_party_members = data_object.number_party_members
+	let classes_to_roll = data_object.classes_to_roll
 	let multiclass_chance = data_object.multiclass_chance
 	let multiclass_maxTotal = data_object.multiclass_maxTotal
 	let has_subclasses = data_object.has_subclasses
@@ -91,8 +92,7 @@ function generate_random_party_classes(data_object, button_element) {
     }
 
 	
-		
-	for (let i=0; i<number_party_members; i++) {
+	for (let i=0; i<classes_to_roll; i++) {
 		let selected_group = subclass_groupings[generate_random_number(subclass_groupings.length)]
 		let selected_group_object = selected_group[1]
 		let selected_group_array = Object.entries(selected_group_object);
@@ -103,7 +103,6 @@ function generate_random_party_classes(data_object, button_element) {
 		if (has_subclasses) {
 			var selected_subclass = selected_class_array[1][generate_random_number(selected_class_array[1].length)];
 		} 
-		
 		
 		switch (document.getElementById("exclusion-criteria").value) {
 		  	case "no-repeat-subclasses":
@@ -171,7 +170,7 @@ function generate_random_party_classes(data_object, button_element) {
 
 
 function generate_random_party_companions(data_object, button_element) {
-	let number_party_members = data_object.number_party_members
+	let companions_to_roll = data_object.companions_to_roll
 	let companion_options = data_object.companion_options
 		
 	let decision_string = "";
@@ -190,23 +189,24 @@ function generate_random_party_companions(data_object, button_element) {
         error_divs[0].parentNode.removeChild(error_divs[0]);
     }
 
-
-	for (let i=0; i<number_party_members; i++) {
-		let selected_companion = companion_options[generate_random_number(companion_options.length)]
-		
-		if (!companion_options) {
+	if (!companion_options) {
 					partyContainer.innerHTML = "";
 					error_no_subclasses_div = document.createElement("div");
 					error_message = "This game doesn't support companions";
 					error_no_subclasses_div.textContent += `${error_message}`;
 					error_no_subclasses_div.classList.add("error");
 					partyContainer.append(error_no_subclasses_div);
-					return
-				} else if (already_selected_companions.includes(selected_companion))
-				{
-					generate_random_party_companions(data_object, button_element)
-					return
-				}
+					return 
+	}
+
+	for (let i=0; i<companions_to_roll; i++) {
+		let selected_companion = companion_options[generate_random_number(companion_options.length)]
+		
+		if (already_selected_companions.includes(selected_companion))
+			{
+				generate_random_party_companions(data_object, button_element)
+				return
+			}
 				
 		decision_string = selected_companion + " ";
 		

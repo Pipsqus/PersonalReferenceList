@@ -37,15 +37,15 @@ menu > * {
 	align-items: left;
 	flex-wrap: wrap;
 }
-#party_container {
-	display: inline;
+.party_container {
+	display: block;
 	margin-top: 0.65em;
+	align-items: stretch;
+	align-content: space-around;
 }
 .party_element {
 	flex: 1 1 280px;
 	text-align: left;
-	height: 28px;
-	max-height: 28px;
 	margin: 3px 18px 0 0;
 }
 .game_button {
@@ -53,7 +53,7 @@ menu > * {
 	margin: 12px 14px 12px 0;
 	width: 22%;
 	min-width: 280px;
-	height: calc(width/2.13);
+	max-height: 135px;
 }
 .game_button img {
 	width: 100%;
