@@ -63,12 +63,21 @@ menu > * {
 	display: none;
 }
 
-#button_classes {
-	background-color: rgb(28, 58, 148);
+#button_everything {
+	background-color: rgb(196, 37, 75);
 	border-radius: 8px;
 	margin-bottom: 12px;
 	filter : brightness(130%);
 	border : 4px solid;	
+}
+#button_everything:hover {
+	transform: translate(0, -4px);
+}
+#button_classes {
+	background-color: rgb(28, 58, 148);
+	border-radius: 8px;
+	margin-bottom: 12px;
+	border: 0;
 }
 #button_classes:hover {
 	transform: translate(0, -4px);
@@ -81,4 +90,24 @@ menu > * {
 }
 #button_companions:hover {
 	transform: translate(0, -4px);
+}
+#button_races {
+	background-color: rgb(97, 191, 112);
+	border-radius: 8px;
+	margin-bottom: 12px;
+	border: 0;
+}
+#button_races:hover {
+	transform: translate(0, -4px);
+}
+
+#tick {
+	width: 12px;
+	height: 12px;
+	max-width: 12px;
+	max-height: 12px
+}
+.wrapper {
+	position: relative;
+	display: inline-block;
 }

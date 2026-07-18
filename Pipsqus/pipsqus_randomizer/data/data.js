@@ -185,12 +185,15 @@ let bg3_data = {
 	game_name : "bg3",
 	classes_to_roll : 4,
 	companions_to_roll : 3,
+	races_to_roll : 1,
 
 	multiclass_chance : 55,
 	multiclass_maxTotal : 2,
+	multiclass_options_to_grant: 3,
 	
 	has_subclasses : true,
 	
+	races_options : ["Human", "Elf", "Drow", "Half-Elf", "Half-Orc", "Halfling", "Dwarf", "Gnome", "Tiefling", "Githyanki", "Dragonborn"],
 	companion_options : ["Astarion", "Gale", "Karlach", "Lae\'zel", "Shadowheart", "Wyll", "Halsin", "Jaheira", "Minsc", "Minthara"],
 	character_options : {
 		caster_arcane : {

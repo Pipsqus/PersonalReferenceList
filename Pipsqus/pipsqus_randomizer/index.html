@@ -2,26 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Class Randomizer</title>
+  <title>Spinner</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.png">
-  <script src="data/class_data.js"></script>
-  <script src="script/randomizer.js"></script>
+  <script src="data/data.js"></script>
+  <script src="script/decider.js"></script>
+  <script src="script/helper_functions.js"></script>
+  <script src="script/randomizer_all.js"></script>
+  <script src="script/randomizer_classes.js"></script>
+  <script src="script/randomizer_companions.js"></script>
+  <script src="script/randomizer_races.js"></script>
+  <script>
+	current_randomization_choice = "everything";
+  </script>
+  
 </head>
 
 <body>
-  	<h1>Randomizer</h1>
+  	<span class="wrapper"><h1>Spinner</h1>
+  	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(30deg); position: absolute; left: 24.5%; top: 15px" width="38" height="38" viewBox="0 0 32 32"><path fill="currentColor" d="M29.93 16.29c.02-.03.05-.07.06-.11v-.01c.01-.02.01-.04.02-.06c0-.02.01-.04.01-.07v-.08c0-.02-.01-.04-.01-.06v-.01c0-.02-.01-.04-.02-.05v-.01l-.03-.06c-.01-.02-.02-.03-.03-.05l-.01-.01c-.01-.02-.03-.03-.04-.05a.2.2 0 0 0-.05-.04l-.01-.01a.2.2 0 0 1-.06-.04c-2.58-1.39-4-3.3-4.2-5.67c-.16-1.81.46-3.23.46-3.24v-.01c.01-.02.02-.04.02-.06v-.01c.01-.02.01-.04.01-.06v-.16a.3.3 0 0 0-.03-.11s0-.01-.01-.01a.2.2 0 0 0-.03-.05c-.01-.02-.03-.04-.04-.05v-.01l-.01-.01l-.02-.02l-.02-.02l-.01-.01c-.02-.01-.03-.03-.05-.04c0 0-.01 0-.01-.01c-.01 0-.03-.01-.04-.02c0 0-.01 0-.01-.01c-.02-.01-.04-.02-.06-.02h-.01c-.02-.01-.04-.01-.06-.01h-.17c-.02 0-.04.01-.06.01c-2.81.84-5.16.5-6.98-1.04c-1.38-1.16-1.95-2.6-1.95-2.61l-.03-.06c-.01-.02-.02-.03-.03-.05l-.01-.01c-.01-.02-.03-.03-.04-.05l-.04-.04l-.01-.01c-.03-.02-.07-.05-.11-.06h-.01c-.02-.01-.04-.01-.06-.02c-.04-.01-.06-.02-.08-.02h-.09c-.02 0-.04.01-.06.01h-.01c-.02 0-.03.01-.05.02c0 0-.01 0-.01.01l-.06.03h-.01c-.02.01-.03.02-.05.03l-.01.01c-.02.01-.03.03-.05.04l-.04.04l-.01.01c-.01.02-.02.04-.03.05c-1.39 2.58-3.3 4-5.67 4.2C8.11 6.63 6.69 6 6.68 6h-.01l-.06-.03H6.6c-.02 0-.04-.01-.05-.01h-.16c-.04.01-.08.02-.12.04c0 0-.01 0-.01.01c-.02 0-.04.01-.05.02c-.03.02-.04.03-.06.04h-.01l-.01.01c0 .01 0 .02-.01.02c-.01.01-.01.02-.02.02l-.01.01c-.01.02-.03.04-.04.06c0 0 0 .01-.01.01c0 .01-.01.03-.02.04c0 0 0 .01-.01.01c0 .02-.01.04-.02.07c0 .02-.01.04-.01.06v.15c0 .02.01.04.01.06c.84 2.81.5 5.16-1.04 6.98c-1.16 1.38-2.59 1.94-2.62 1.95l-.06.03h-.01c-.02.01-.03.02-.05.03l-.01.01c-.02.01-.03.03-.05.04l-.01.01c-.01.01-.02.03-.04.04l-.01.01c-.02.03-.04.07-.06.11v.01c-.01.02-.01.04-.02.06c0 .02-.01.04-.01.06v.08c0 .02.01.04.01.06v.01c0 .02.01.04.02.05v.01l.03.06c.01.02.02.03.03.05l.01.01c.01.02.03.03.04.05c.01.01.03.03.05.04l.01.01c.02.01.04.02.06.04c2.58 1.39 4 3.3 4.2 5.67c.18 1.84-.44 3.26-.44 3.27v.01c-.01.02-.02.04-.02.06v.01c-.01.02-.01.04-.01.06v.16c.01.04.02.08.04.12c0 0 0 .01.01.01c.01.02.02.04.03.05c.01.02.03.04.04.05v.01l.01.01l.02.02l.02.02l.01.01c.02.01.03.03.05.04c0 0 .01 0 .01.01c.02.01.03.02.05.03c0 0 .01 0 .01.01c.02.01.04.02.06.02h.01c.02.01.04.01.06.01h.15c.02 0 .04-.01.06-.01c2.81-.85 5.16-.5 6.98 1.04c1.38 1.16 1.95 2.6 1.95 2.61l.03.06c.01.02.02.03.03.05l.01.01c.01.02.03.03.04.05l.04.04l.01.01c.03.02.07.05.11.06h.01c.02.01.04.01.06.02c.02 0 .04.01.06.01h.12c.02 0 .03-.01.05-.01h.01a.4.4 0 0 0 .11-.05l.01-.01c.01-.01.03-.02.04-.03l.01-.01c.02-.01.03-.03.04-.04l.01-.01c.01-.01.02-.02.03-.04l.01-.01c.01-.02.02-.03.03-.05c1.39-2.58 3.3-4 5.67-4.2c1.8-.16 3.22.46 3.23.47c.02.01.04.02.06.02h.01c.02.01.04.01.06.01h.17c.04-.01.08-.02.12-.04c0 0 .01 0 .01-.01c.02-.01.04-.02.05-.03c.02-.01.04-.03.05-.04h.01l.01-.01l.02-.02l.02-.02l.01-.01c.01-.02.03-.03.04-.05c0 0 0-.01.01-.01c.01-.02.02-.03.03-.05c0 0 0-.01.01-.01c.01-.02.02-.04.02-.06c.01-.02.01-.04.01-.06v-.15c0-.02-.01-.04-.01-.06c-.84-2.81-.5-5.16 1.04-6.98c1.16-1.38 2.6-1.95 2.61-1.95l.06-.03h.01c.02-.01.03-.02.05-.03l.01-.01c.02-.01.03-.03.05-.04l.04-.04c.01-.04.01-.04.02-.05m-2.13-.79h-4.15c-2.84-1.6-2.08-4.05-1.9-4.52l2.86-2.86c-.08.53-.11 1.15-.06 1.81c.21 2.61 1.68 4.39 3.25 5.57m-16.3 3.86c-.07-.82-.39-1.9-1.41-2.86h4.73l-3.3 3.3c0-.14-.01-.29-.02-.44m5.02-9.23c.1.1.21.2.32.3c.6.51 1.53 1.02 2.85 1.02h.17l-3.34 3.34zm-1 4.66l-3.3-3.3c.14 0 .29 0 .44-.01c.82-.07 1.9-.39 2.86-1.41zm-.71.71h-4.66c.1-.1.2-.21.3-.32c.53-.63 1.07-1.61 1.02-3.02zm.71 1.71v4.67c-.1-.1-.21-.2-.32-.3c-.6-.51-1.53-1.02-2.85-1.02h-.17zm1 0l3.3 3.3c-.14 0-.29 0-.44.01c-.82.07-1.9.39-2.86 1.41zm.71-.71h4.67c-.1.1-.2.21-.3.32c-.53.63-1.07 1.61-1.02 3.02zm0-1l3.3-3.3c0 .14 0 .29.01.44c.07.82.39 1.9 1.41 2.86zm.53-9.83c1.99 1.7 4.29 1.92 6.24 1.64l-2.94 2.94c-3.14.88-4.33-1.39-4.54-1.85V4.35c.32.43.73.89 1.24 1.32m-7.81 1.8c2.61-.21 4.39-1.68 5.57-3.25v4.15c-1.6 2.84-4.05 2.08-4.52 1.9L8.14 7.41c.53.07 1.14.11 1.81.06m-4.26 6.79c1.7-1.99 1.92-4.29 1.64-6.24l2.94 2.94c.88 3.13-1.39 4.33-1.85 4.54H4.37c.43-.32.89-.73 1.32-1.24M4.24 16.5h4.15c2.84 1.6 2.08 4.05 1.9 4.52l-2.86 2.86c.08-.53.11-1.15.06-1.81c-.21-2.61-1.68-4.39-3.25-5.57m10.04 9.83c-1.54-1.31-3.27-1.74-4.87-1.74c-.47 0-.93.04-1.37.1l2.94-2.94c3.14-.88 4.33 1.39 4.54 1.85v4.05c-.32-.43-.73-.89-1.24-1.32m7.81-1.8c-2.61.21-4.39 1.68-5.57 3.25v-4.15c1.6-2.84 4.05-2.08 4.52-1.9l2.86 2.86c-.53-.07-1.14-.11-1.81-.06m4.26-6.79c-1.7 1.99-1.92 4.29-1.64 6.24l-2.94-2.94c-.88-3.14 1.39-4.33 1.85-4.54h4.05c-.43.32-.89.73-1.32 1.24"></path></svg></span>
 
 	<menu>
-		<button class="menu_item" id="button_classes" onclick="set_randomizer_to_classes()">
-			<svg class="svg_icon" viewBox="0 0 24 24" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(0deg); --darkreader-inline-color: var(--darkreader-text-4a5565, #b1aaa0);" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" style="--darkreader-inline-stroke: currentColor;"><path d="M5.06 21.06a1.5 1.5 0 1 1-2.12-2.121a1.5 1.5 0 0 1 2.12 2.122Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="m8 16l-2.5 2.5"></path><path stroke-linejoin="round" d="m9.5 16.5l10.573-9.297a1.73 1.73 0 0 0 .554-.92L21.5 2.5l-3.783.873a1.73 1.73 0 0 0-.92.554L7.5 14.5"></path><path stroke-linecap="round" stroke-linejoin="round" d="M4 13h.572a2 2 0 0 1 1.414.586l4.428 4.428A2 2 0 0 1 11 19.428V20"></path></g></svg>
+	
+		<button class="menu_item" id="button_everything" onclick="set_randomizer_to_everything()">			
+			<svg class="svg_icon" viewBox="0 0 24 24" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(0deg); --darkreader-inline-color: var(--darkreader-text-4a5565, #b1aaa0);" width="48" height="48" viewBox="0 0 24 24">
+			<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M256 256s-48-96-126-96c-54.12 0-98 43-98 96s43.88 96 98 96c37.51 0 71-22.41 94-48m32-48s48 96 126 96c54.12 0 98-43 98-96s-43.88-96-98-96c-37.51 0-71 22.41-94 48"></path>
+			</svg>		
+		Everything
+		</button>
+		
+		<button class="menu_item" id="button_classes" onclick="set_randomizer_to_parameter('classes')">			
+			<svg class="svg_icon" viewBox="0 0 24 24" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(0deg); --darkreader-inline-color: var(--darkreader-text-4a5565, #b1aaa0);" width="48" height="48" viewBox="0 0 24 24">
+			<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7.987 9.491l-2.31-1.978C4.154 6.203 4.15 4.301 3.987 3.02c1.666.079 2.956.23 4.08 1.179l1.176 1.336l1.273 1.429m8.941 11.454l-2.965-3m-2.47 3c.022-.272.2-.978 1.019-1.734c.734-.679 2.327-2.305 3.042-3.01c.406-.4 1.07-.68 1.374-.679m-3.889-.187l1.337 1.479m-3.229.15l1.495 1.313m5.29 2.23c.831.002 1.54.615 1.539 1.445s-.708 1.558-1.538 1.556s-1.471-.732-1.47-1.562c.054-.825.665-1.328 1.47-1.439m-15.866.413l2.958-2.892m-2.992-2.514c.272.022 1.032.204 1.712 1.054c.625.78 2.31 2.29 3.017 3.003c.4.405.68 1.045.68 1.349M7.265 14.23l8.239-9.566c1.34-1.496 3.214-1.529 4.5-1.666c-.112 1.663-.289 2.95-1.26 4.055L8.55 15.926M5.006 19.5A1.503 1.503 0 1 1 2 19.498a1.503 1.503 0 0 1 3.006 0"></path
+			></svg>		
 		Classes
 		</button>
 		
-		<button class="menu_item" id="button_companions" onclick="set_randomizer_to_companions()">
+		<button class="menu_item" id="button_companions" onclick="set_randomizer_to_parameter('companions')">
 			<svg class="svg_icon" role="img" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(0deg);" width="48" height="48" viewBox="0 0 24 24">
 			  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
 			  <path d="M1 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1"></path>
@@ -30,22 +50,34 @@
 			</g></svg>
 		Party
 		</button>
+		
+		<button class="menu_item" id="button_races" onclick="set_randomizer_to_parameter('races')">
+			<svg aria-hidden="true" role="img" style="color: rgb(255, 255, 255); opacity: 1; transform: rotate(0deg);" width="48" height="48" viewBox="0 0 24 24">
+			<path fill="currentColor" d="M9.2 13.73a1 1 0 0 0-1.41-.05A11.18 11.18 0 0 0 4 22a1 1 0 0 0 2 0a9.15 9.15 0 0 1 3.15-6.86a1 1 0 0 0 .05-1.41m10.17 4.64a10.9 10.9 0 0 0-1.6-3A14.3 14.3 0 0 0 14.06 12C16.3 10.57 20 7.4 20 2a1 1 0 0 0-2 0c0 5.4-4.59 8.17-6 8.89A13.4 13.4 0 0 1 9.31 9H12a1 1 0 0 0 0-2H7.55a9.4 9.4 0 0 1-1-2H15a1 1 0 0 0 0-2H6.06A8 8 0 0 1 6 2a1 1 0 0 0-2 0c0 7.57 7.3 10.79 7.61 10.92A13 13 0 0 1 14.7 15H12a1 1 0 0 0 0 2h4.43a9 9 0 0 1 1 2H9a1 1 0 0 0 0 2h8.94a8 8 0 0 1 .06 1a1 1 0 0 0 2 0a10.5 10.5 0 0 0-.22-2.19a9 9 0 0 0-.41-1.44"></path>
+			</svg>
+		Races
+		</button>
+		
 	</menu>
   
-  <div id="exclusion-criteria-div">
-  	<select id="exclusion-criteria">
+  <div id="exclusion_criteria_div">
+  	<select id="criteria_classes">
   		<option value="no-repeat-subclasses">Avoid repeated subclasses</option>
   		<option value="no-repeat-classes" selected>Avoid repeated classes</option>
   		<!-- <option value="no-repeat-groups">Avoid repeated roles</option> Useful? The way the classes are divided into roles is obscure unless dug up through the code. Also loops if roles<number_of_party_members, e.g., Rogue Trader -->
   		<option value="any">Any</option>
   	</select>
+  	<select id="criteria_races">
+  		<option value="no-repeat-races" selected>Avoid repeated races</option>
+  		<option value="no-repeat-subraces">Avoid repeated subraces</option>
+  		<option value="any">Any</option>
+  	</select>
   </div>
+  
   	
   <div class="game_list">
   </div>
   	
-  	
-
   	
   <script src="script/game_list.js"></script>
 </body>
