@@ -60,14 +60,14 @@
   
   <div id="exclusion_criteria_div">
   	<select id="criteria_classes">
-  		<option value="no-repeat-subclasses">Avoid repeated subclasses</option>
-  		<option value="no-repeat-classes" selected>Avoid repeated classes</option>
-  		<!-- <option value="no-repeat-groups">Avoid repeated roles</option> Useful? The way the classes are divided into roles is obscure unless dug up through the code. Also loops if roles<number_of_party_members, e.g., Rogue Trader -->
+  		<option value="no-repeat-classes" selected>Unique classes</option>
+  		<option value="no-repeat-subclasses">Unique subclasses</option>
+  		<!-- <option value="no-repeat-groups">Avoid repeated roles</option> Useful? The way the classes are divided into roles is obscure unless dug up through the code. Also loops if roles < number_of_party_members, e.g., Rogue Trader -->
   		<option value="any">Any</option>
   	</select>
   	<select id="criteria_races">
-  		<option value="no-repeat-races" selected>Avoid repeated races</option>
-  		<option value="no-repeat-subraces">Avoid repeated subraces</option>
+  		<option value="no-repeat-races" selected>Unique races</option>
+  		<option value="no-repeat-subraces">Unique subraces</option>
   		<option value="any">Any</option>
   	</select>
   </div>

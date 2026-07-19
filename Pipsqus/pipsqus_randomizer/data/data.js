@@ -10,9 +10,80 @@ let solasta_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
+	has_subraces : true,
 
 	companion_options : false,
-	races_options : ["Human", "Elf", "Drow", "Half-Elf", "Half-Orc", "Halfling", "Dwarf", "Gnome", "Tiefling", "Githyanki", "Dragonborn"],
+	
+	races_options : {
+		"Human" : 
+			["Aasimar",
+			"Warforged",
+			"Wildling"],
+		"Dwarf" : 
+			["Hill Dwarf",
+			"Snow Dwarf",
+			"Obsidian Dwarf",
+			"Gray Dwarf",
+			"Ironborn Dwarf",],
+		"Elf" : 
+			["High Elf",
+			"Sylvan Elf",
+			"Dark Elf",
+			"Shadar-Kai",],
+		"Fairy" : 
+			[""],
+		"Firbolg" : 
+			[""],
+		"Half-Elf" : 
+			["High Half-Elf",
+			"Sylvan Half-Elf",
+			"Dark Half-Elf"],
+		"Gnome" : 
+			["Rock Gnome",
+			"Shadow Gnome",
+			],
+		"Half-Orc" : 
+			[""],
+		"Goliath" : 
+			[""],
+		"Halfling" : 
+			["Island Halfling",
+			"Marsh Halfling"],
+		"Imp" : 
+			["Badland Imp",
+			"Forest Imp",
+			"Infernal Imp"],
+		"Kobold" : 
+			["Dark Kobold",
+			"Draconic Kobold"],
+		"Lizardfolk" : 
+			[""],
+		"Oni" : 
+			[""],
+		"Tiefling" : 
+			["Devil`s Tongue",
+			"Mephistopheles Tiefling",
+			"Feral Tiefling",
+			"Zariel Tiefling"],
+		"Wendigo" : 
+			[""],
+		"Wyrmkin" : 
+			["Cave Wyrmkin",
+			"Crystal Wyrmkin",
+			"High Wyrmkin"],
+		"Dragonborn" : 
+			["Black Dragonborn",
+			"Blue Dragonborn",
+			"Brass Dragonborn",
+			"Bronze Dragonborn",
+			"Copper Dragonborn",
+			"Gold Dragonborn",
+			"Green Dragonborn",
+			"Red Dragonborn",
+			"Silver Dragonborn",
+			"White Dragonborn"],
+	},
+	
 	character_options : {
 		caster_arcane : {
 			"Artificer" : 
@@ -197,9 +268,53 @@ let bg3_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
+	has_subraces : true,
 	
 	companion_options : ["Astarion", "Gale", "Karlach", "Lae\'zel", "Shadowheart", "Wyll", "Halsin", "Jaheira", "Minsc", "Minthara"],
-	races_options : ["Human", "Elf", "Drow", "Half-Elf", "Half-Orc", "Halfling", "Dwarf", "Gnome", "Tiefling", "Githyanki", "Dragonborn"],
+	races_options : {
+		"Human" : 
+			[""],
+		"Elf" : 
+			["High Elf",
+			"Wood Elf"],
+		"Drow" :
+			["Lolth-Sworn",
+			"Seldarine Drow"],
+		"Half-Elf" : 
+			["High Half-Elf",
+			"Wood Half-Elf",
+			"Drow Half-Elf"],
+		"Half-Orc" : 
+			[""],
+		"Halfling" : 
+			["Lightfoot Halfling",
+			"Strongheart Halfling"],
+		"Dwarf" : 
+			["Gold Dwarf",
+			"Shield Dwarf",
+			"Duergar"],
+		"Gnome" : 
+			["Forest Gnome",
+			"Deep Gnome",
+			"Rock Gnome"],
+		"Tiefling" : 
+			["Asmodeus Tiefling",
+			"Mephistopheles Tiefling",
+			"Zariel Tiefling"],
+		"Githyanki" : 
+			[""],
+		"Dragonborn" : 
+			["Black Dragonborn",
+			"Blue Dragonborn",
+			"Brass Dragonborn",
+			"Bronze Dragonborn",
+			"Copper Dragonborn",
+			"Gold Dragonborn",
+			"Green Dragonborn",
+			"Red Dragonborn",
+			"Silver Dragonborn",
+			"White Dragonborn"],
+	},
 	character_options : {
 		caster_arcane : {
 			"Warlock" : 
@@ -298,9 +413,10 @@ let sunderfolk_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : false,
+	has_subraces : false,
 	
 	companion_options : [],
-	races_options : [],
+	races_options : {},
 	character_options : {
 		caster_arcane : {
 			"Arcanist" : 
@@ -343,8 +459,25 @@ let roguetrader_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
+	has_subraces : false,
+	
 	companion_options : ["Abelard", "Idira", "Argenta", "Cassia", "Pasqal", "Heinrix", "Jae", "Yrliet", "Marazhai", "Ulfar", "Kibellah", "Solomorne", "Eogunn"],
-	races_options : ["Astra Militarum Commander", "Commissar", "Crime Lord", "Ministorum Priest", "Navy Officer", "Noble", "Sanctioned Psyker - Biomancer", "Sanctioned Psyker - Diviner", "Sanctioned Psyker - Pyromancer", "Sanctioned Psyker - Sanctic", "Sanctioned Psyker - Telepath"],
+	races_options :	{
+		"Astra Militarum Commander" : 
+			[""],
+		"Commissar" : 
+			[""],
+		"Crime Lord" :
+			[""],
+		"Ministorum Priest" : 
+			[""],
+		"Navy Officer" : 
+			[""],
+		"Noble" : 
+			[""],
+		"Sanctioned Psyker" : 
+			[""],
+	},
 	character_options : {
 		frontline : {
 			"Bladedancer" : 
@@ -413,9 +546,32 @@ let pillars1_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : false,
+	has_subraces : true,
 	
 	companion_options : ["Aloth", "Edér", "Kana", "Durance", "Sagani", "Grieving Mother", "Hiravias", "Pallegina", "Devil of Caroc", "Zahua", "Maneha"],
-	races_options : ["Aumaua", "Dwarf", "Elf", "Godlike", "Human", "Orlan"],
+	races_options : {
+		"Aumaua" : 
+			["Coastal Aumaua",
+			"Island Aumaua"],
+		"Dwarf" : 
+			["Mountain Dwarf",
+			"Boreal Dwarf"],
+		"Elf" :
+			["Wood Elf",
+			"Pale Elf"],
+		"Godlike" : 
+			["Death Godlike",
+			"Fire Godlike",
+			"Nature Godlike",
+			"Moon Godlike"],
+		"Human" : 
+			["Meadow Folk",
+			"Ocean Folk",
+			"Savannah Folk"],
+		"Orlan" : 
+			["Hearth Orlan",
+			"Wild Orlan"],
+	},
 	character_options : {
 		all_classes : {
 			"Barbarian" : 
@@ -456,9 +612,34 @@ let deadfire_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
+	has_subraces : true,
 	
 	companion_options : ["Aloth", "Edér", "Maia", "Pallegina", "Serafen", "Tekehu", "Xoti", "Vatnir", "Ydwin", "Fassina", "Mirke", "Rekke", "Konstanten"],
-	races_options : ["Aumaua", "Dwarf", "Elf", "Godlike", "Human", "Orlan"],
+	
+	races_options : {
+		"Aumaua" : 
+			["Coastal Aumaua",
+			"Island Aumaua"],
+		"Dwarf" : 
+			["Mountain Dwarf",
+			"Boreal Dwarf"],
+		"Elf" :
+			["Wood Elf",
+			"Pale Elf"],
+		"Godlike" : 
+			["Death Godlike",
+			"Fire Godlike",
+			"Nature Godlike",
+			"Moon Godlike"],
+		"Human" : 
+			["Meadow Folk",
+			"Ocean Folk",
+			"Savannah Folk"],
+		"Orlan" : 
+			["Hearth Orlan",
+			"Wild Orlan"],
+	},
+	
 	character_options : {
 		all_classes : {
 			"Barbarian" : 
@@ -547,9 +728,45 @@ let kingmaker_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
+	has_subraces : true,
 	
 	companion_options : ["Amiri", "Jubilost", "Valerie", "Octavia", "Regongar", "Ekundayo", "Nok-Nok", "Harrim", "Tristian", "Jaethal", "Linzi", "Kalikke", "Kanerah"],
-	races_options : ["Human", "Elf", "Dwarf", "Gnome", "Halfling", "Half-Elf", "Half-Orc", "Aasimar", "Tiefling"],
+	races_options : {
+		"Human" : 
+			["Basic"],
+		"Elf" : 
+			["Basic"],
+		"Dwarf" :
+			["Basic"],
+		"Gnome" : 
+			["Basic"],
+		"Halfling" : 
+			["Basic"],
+		"Half-Elf" : 
+			["Basic"],
+		"Half-Orc" : 
+			["Basic"],
+		"Aasimar" : 
+			["Basic",
+			"Angelkin",
+			"Emberkin",
+			"Idyllkin",
+			"Lawbringer",
+			"Musetouched",
+			"Plumethkith"],
+		"Tiefling" : 
+			["Basic",
+			"Beastbrood",
+			"Faultspawn",
+			"Foulspawn",
+			"Grimspawn",
+			"Hellspawn",
+			"Hungerseed",
+			"Motherless",
+			"Pitborn",
+			"Shackleborn",
+			"Spitespawn",],
+	},
 	character_options : {
 		all_classes : {
 			"Alchemist" : 
@@ -648,9 +865,73 @@ let wrathoftherighteous_data = {
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
+	has_subraces : true,
 	
 	companion_options : ["Camellia", "Seelah", "Lann", "Ember", "Arueshalae", "Woljif", "Daeran", "Sosiel", "Regill", "Wenduag", "Nenio", "Greybor", "Ulbrig"],
-	races_options : ["Human", "Elf", "Dwarf", "Gnome", "Halfling", "Half-Elf", "Half-Orc", "Aasimar", "Tiefling", "Oread", "Dhampir", "Kitsune"],
+	
+	races_options : {
+		"Human" : 
+			[""],
+		"Elf" : 
+			["Basic",
+			"Blightborn",
+			"Loremaster"],
+		"Dwarf" :
+			["Basic",
+			"Barrow Dwarf",
+			"Unstoppable Dwarf"],
+		"Gnome" : 
+			["Basic",
+			"Pyromaniac",
+			"Traveler"],
+		"Halfling" : 
+			["Basic",
+			"Craven",
+			"Hasty"],
+		"Half-Elf" : 
+			["Basic",
+			"Dual Heritage",
+			"Kindred-Raised"],
+		"Half-Orc" : 
+			["Basic",
+			"Human-Raised",
+			"Tribal"],
+		"Aasimar" : 
+			["Basic",
+			"Angelkin",
+			"Emberkin",
+			"Idyllkin",
+			"Lawbringer",
+			"Musetouched",
+			"Plumethkith"],
+		"Tiefling" : 
+			["Basic",
+			"Beastbrood",
+			"Faultspawn",
+			"Foulspawn",
+			"Grimspawn",
+			"Hellspawn",
+			"Hungerseed",
+			"Motherless",
+			"Pitborn",
+			"Shackleborn",
+			"Spitespawn",],
+		"Oread" : 
+			["Basic",
+			"Gemsoul",
+			"Ironsoul"],
+		"Dhampir" : 
+			["Basic",
+			"Jianh-Shi-Born",
+			"Moroi-Born",
+			"Nosferatu-Born",
+			"Vampire King-Born",
+			"Vetala-Born",],
+		"Kitsune" : 
+			["Basic",
+			"Keen Kitsune"],
+	},
+	
 	character_options : {
 		all_classes : {
 			"Alchemist" : 
