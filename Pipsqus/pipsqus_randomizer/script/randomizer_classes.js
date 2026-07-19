@@ -78,7 +78,7 @@ function generate_random_party_classes(data_object, button_element) {
 				}
 				break;
 		  	case "no-repeat-classes":
-			  	if (already_selected_classes.includes(selected_class)) {
+			  	if (already_selected_classes.includes(selected_class) || already_selected_subclasses.includes(selected_subclass)) {
 						generate_random_party_classes(data_object, button_element)
 						return
 					};
@@ -134,6 +134,7 @@ function provide_multiclass_options(data_object, partyContainer, already_selecte
 	let classes_to_roll = data_object.classes_to_roll
 	let has_subclasses = data_object.has_subclasses
 	let character_options = data_object.character_options
+	let multiclass_selection_text = data_object.multiclass_selection_text
 		
 	let decision_string = "";
 	let current_party = [];
@@ -184,7 +185,7 @@ function provide_multiclass_options(data_object, partyContainer, already_selecte
 				}
 				break;
 		  	case "no-repeat-classes":
-			  	if (already_selected_classes.includes(selected_class)) {
+			  	if (already_selected_classes.includes(selected_class) || already_selected_subclasses.includes(selected_subclass)) {
 						provide_multiclass_options(data_object, partyContainer, already_selected_subclasses, multiclass_options_to_grant)
 						return
 					};
@@ -223,7 +224,7 @@ function provide_multiclass_options(data_object, partyContainer, already_selecte
 	
 	title_to_append = document.createElement("div");
 	title_to_append.classList.add("party_element");
-	title_to_append.textContent += "~ Multiclass Options ~";
+	title_to_append.textContent += multiclass_selection_text;
 	partyContainer_multiclass.prepend(title_to_append);
 	
 	
