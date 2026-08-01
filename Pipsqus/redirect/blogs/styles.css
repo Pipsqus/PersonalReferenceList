@@ -1,0 +1,49 @@
+body {
+	margin: 5vw;
+	background-color: rgb(175,170,255);
+	font-size: 1.4rem;
+}
+h1 {
+	text-align: center;
+}
+.category {
+	margin: 5px;
+	font-size: 1.3rem;
+	padding: 15px;
+	width: 200px;
+	text-align: center;
+	backdrop-filter: invert;
+}
+li {
+	font-size: 1.1rem;
+	text-align: left;
+}
+a:visited, a:hover {
+	color: blue;
+}
+.flex {
+	display: flex;
+	flex-flow: row wrap;	
+	text-align: left;
+	height: calc(100vh - 4vh);
+}
+.flex > * {
+	flex: 1 0 29%;
+	min-width: 200px;
+}
+.noshow {
+}
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    margin: 5vw 2vw 2vw 5vw;
+    background-color: rgb(175,170,255);
+  }
+}
+
+.deg {
+	width: 40px;
+}
