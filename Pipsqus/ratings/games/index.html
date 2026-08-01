@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="media/gamesRating.css">
+		<link rel="icon" type="image/x-icon" href="ratingFavicon.svg">
+		<title>Game Ratings</title>
+	</head>
+	<body class="dark"> 
+	 	<h1>Game Ratings <button id="toggle" onclick="toggleDark()">Light Mode</button></h1>
+			<div class="index">
+			<table>
+				<caption></caption>
+				<thead>
+					<tr>
+						<th>Image</th>
+						<th class="Title">Title</th>
+						<th>Overall Score</th>
+						<th>Graphics</th>
+						<th>Story</th>
+						<th>Depth</th>
+						<th>Magic</th>
+						<th>Sandbox</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="media/noita.jpg"></td>
+						<td class="Title">Noita</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/oni.jpg"></td>
+						<td class="Title">Oxygen Not Included</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/factorio.jpg"></td>
+						<td class="Title">Factorio</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/poe.jpg"></td>
+						<td class="Title">Pillars of Eternity</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/monstertrain.jpg"></td>
+						<td class="Title">Monster Train</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src=""></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img></td>
+					</tr>
+					<tr>
+						<td><a href="game_resources/Baldurs_Gate_II_RESOURCES.html"><img src="media/baldur2.jpg"></a></td>
+						<td class="Title">Baldur's Gate II</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/iwd.jpg"></td>
+						<td class="Title">Icewind Dale</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/iwd2.jpg"></td>
+						<td class="Title">Icewind Dale II</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/subnautica.jpg"></td>
+						<td class="Title">Subnautica</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/minecraft.png"></td>
+						<td class="Title">Minecraft</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/hades.jpg"></td>
+						<td class="Title">Hades</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/hades2.jpg"></td>
+						<td class="Title">Hades II</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/sunderfolk.jpg"></td>
+						<td class="Title">Sunderfolk</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/exapunks.jpg"></td>
+						<td class="Title">EXAPUNKS</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a href="game_resources/Nordhold/nordhold_resources.html"><img src="media/nordhold.jpg"></a></td>
+						<td class="Title">Nordhold</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/deadfire.jpeg"></td>
+						<td class="Title">Pillars of Eternity II: Deadfire</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/oblivion.jpeg"></td>
+						<td class="Title">The Elder Scrolls: Oblivion</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/pokemon.jpg"></td>
+						<td class="Title">Pokemon</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/desktopdungeons.jpg"></td>
+						<td class="Title">Desktop Dungeons</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a href="game_resources/CK3_resources.html"><img src="media/ck3.jpg"></a></td>
+						<td class="Title">Crusader Kings 3</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/farcryprimal.jpg"></td>
+						<td class="Title">Far Cry Primal</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/hollowknight.jpg"></td>
+						<td class="Title">Hollow Knight</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/gordianquest.jpg"></td>
+						<td class="Title">Gordian Quest</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/ori.jpg"></td>
+						<td class="Title">Ori and the Blind Forest</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/vaultofthevoid.jpg"></td>
+						<td class="Title">Vault of the Void</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/trialsoffire.jpg"></td>
+						<td class="Title">Trials of Fire</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a href="game_resources/res_thelastspell.html"><img src="media/thelastspell.jpg"></a></td>
+						<td class="Title">The Last Spell</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/brotato.jpg"></td>
+						<td class="Title">Brotato</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/zomboid.jpg"></td>
+						<td class="Title">Project Zomboid</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/warband.jpg"></td>
+						<td class="Title">Mount&Blade: Warband</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/whispersmachine.jpg"></td>
+						<td class="Title">Whispers of a Machine</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/shadowgambit.jpg"></td>
+						<td class="Title">Shadow Gambit</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/theyarebillions.jpg"></td>
+						<td class="Title">They Are Billions</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/krush.jpg"></td>
+						<td class="Title">Kingdom Rush</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/krushorigins.jpg"></td>
+						<td class="Title">Kingdom Rush: Origins</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/krushfrontiers.jpg"></td>
+						<td class="Title">Kingdom Rush: Frontiers</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/krushvengeance.jpg"></td>
+						<td class="Title">Kingdom Rush: Vengeance</td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/stardew.jpg"></td>
+						<td class="Title">Stardew Valley</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/zootycoon.png"></td>
+						<td class="Title">Zoo Tycoon</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+						<td><img src="media/dcss.png"></td>
+						<td class="Title">Dungeon Crawl Stone Soup</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/diablo.jpg"></td>
+						<td class="Title">Diablo</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/diablo2.jpg"></td>
+						<td class="Title">Diablo II</td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/sanitarium.jpg"></td>
+						<td class="Title">Sanitarium</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/intothebreach.jpg"></td>
+						<td class="Title">Into the Breach</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/mindsbeneathus.jpg"></td>
+						<td class="Title">Minds Beneath Us</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/diablo2.png"></td>
+						<td class="Title">Diablo II</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/lastepoch.jpg"></td>
+						<td class="Title">Last Epoch</td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/slaythespire.jpg"></td>
+						<td class="Title">Slay The Spire</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/slaythespire2.jpg"></td>
+						<td class="Title">Slay The Spire 2</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/dropduchy.jpg"></td>
+						<td class="Title">Drop Duchy</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/scarlethollow.jpg"></td>
+						<td class="Title">Scarlet Hollow</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/slaytheprincess.jpg"></td>
+						<td class="Title">Slay the Princess</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/vampiretherapist.jpg"></td>
+						<td class="Title">Vampire Therapist</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/underrail.jpg"></td>
+						<td class="Title">UnderRail</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					<tr>
+
+						<td><img src="media/terraria.jpg"></td>
+						<td class="Title">Terraria</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/songsofconquest.jpg"></td>
+						<td class="Title">Songs of Conquest</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/ffta2A.jpg"></td>
+						<td class="Title">Final Fantasy Tactics A2: Grimoire of the Rift</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/dorfromantik.jpeg"></td>
+						<td class="Title">Dorfromantik</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/vaporum.jpg"></td>
+						<td class="Title">Vaporum: Lockdown</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/cuphead.jpg"></td>
+						<td class="Title">Cuphead</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td><img src="media/ironmarines.jpg"></td>
+						<td class="Title">Iron Marines</td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+					<tr>
+						<td><img src="media/prII.jpg"></td>
+						<td class="Title">Port Royale II</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/aoe2.jpg"></td>
+						<td class="Title">Age of Empires II</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/aow2.jpg"></td>
+						<td class="Title">Age of Wonders II: The Wizard's Throne</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/ixion.jpg"></td>
+						<td class="Title">Ixion</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/banished.jpg"></td>
+						<td class="Title">Banished</td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/darkestd.webp"></td>
+						<td class="Title">Darkest Dungeons</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td><img src="media/magicraft.jpg"></td>
+						<td class="Title">Magicraft</td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/adom.jpg"></td>
+						<td class="Title">Ancient Domains of Mystery</td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td><img src="media/deathmustdie.jpg"></td>
+						<td class="Title">Death Must Die</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+					</tr>
+
+
+					<tr>
+						<td><img src="media/discoelysium.jpg"></td>
+						<td class="Title">Disco Elysium</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+					</tr>			
+					
+					<tr>
+						<td><img src="media/dawnman.png"></td>
+						<td class="Title">Dawn of Man</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/dontstarve.jpg"></td>
+						<td class="Title">Don't Starve</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/dontstarvetogether.jpg"></td>
+						<td class="Title">Don't Starve Together</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/dune2000.jpeg"></td>
+						<td class="Title">Dune 2000</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/opusmagnum.jpeg"></td>
+						<td class="Title">Opus Magnum</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/patricianIII.jpeg"></td>
+						<td class="Title">Patrician III</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/2.png"></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/satisfactory.jpg"></td>
+						<td class="Title">Satisfactory</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td><img src="media/3.png"></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/SHreturns.jpg"></td>
+						<td class="Title">Shadowrun: Returns</td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/SHdragonfall.png"></td>
+						<td class="Title">Shadowrun: Dragonfall</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/SHHK.jpg"></td>
+						<td class="Title">Shadowrun: Hong Kong</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/1.png"></td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><img src="media/Slipways.jpg"></td>
+						<td class="Title">Slipways</td>
+						<td><img src="media/3.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/2.png"></td>
+						<td><img src="media/3.png"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="media/tormenttides.jpg"></td>
+						<td class="Title">Torment: Tides of Numenera</td>
+						<td><img src="media/1.png"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+				<!--
+					<tr>
+						<td><img src="media/.jpg"></td>
+						<td class="Title"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				-->
+				</tbody>
+			</table>
+		</div>
+
+		<div class="reviews">
+		</div>
+		
+		<script src="showCategories.js"></script>
+	</body>
+</html>
