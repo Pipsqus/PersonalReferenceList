@@ -1018,7 +1018,7 @@ let wrathoftherighteous_data = {
 				"Titan Fighter"
 				],
 			"Hunter" :
-				["Divine Hunter - Hunter",
+				["Divine Hunter",
 				"Urban Hunter",
 				"Colluding Scoundrel",
 				"Forester",
