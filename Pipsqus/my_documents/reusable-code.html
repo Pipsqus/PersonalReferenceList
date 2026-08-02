@@ -48,4 +48,7 @@ bsdtar -xf file.zip
 sudo gedit /etc/timidity/timidity.cfg
 soundfont $HOME/soundfonts/my-sound-font.sf2
 
+## download an entire website
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains example.com --no-parent --level=inf --limit-rate=100k --wait=2 https://example.com
+
 </pre>
