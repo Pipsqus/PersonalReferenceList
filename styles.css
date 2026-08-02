@@ -38,7 +38,7 @@ a {
   margin-left: 1rem; margin-top: -0.5rem;
   width: 60px; height: 60px;
 
-  background: no-repeat url("Pipsqus/favicon.png");
+  background: no-repeat url("pipsqus/favicon.png");
   background-size: contain;
 }
 .portals:last-child::after {
@@ -48,7 +48,7 @@ a {
   width: 60px; height: 60px;
   border-radius: 30px;
 
-  background: no-repeat url("Beardger/favicon.png");
+  background: no-repeat url("beardger/favicon.png");
   background-size: contain;
 }
 
