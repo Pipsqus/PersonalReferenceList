@@ -861,7 +861,7 @@ let wrathoftherighteous_data = {
 
 	multiclass_chance : 65,
 	multiclass_maxTotal : 3,
-	multiclass_options_to_grant: 4,
+	multiclass_options_to_grant: 5,
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
