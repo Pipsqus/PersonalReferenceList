@@ -608,7 +608,7 @@ let deadfire_data = {
 
 	multiclass_chance : 100,
 	multiclass_maxTotal : 4,
-	multiclass_options_to_grant: 2,
+	multiclass_options_to_grant: 4,
 	multiclass_selection_text: "~ Multiclass Options ~",
 	
 	has_subclasses : true,
